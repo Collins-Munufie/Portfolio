@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  max-width: 100%;
 }
 
 :root {
@@ -987,34 +988,8 @@ footer {
 }
 
 
-
-
-
-
-/* ✅ Prevent content from overflowing on small screens */
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-  box-sizing: border-box;
-}
-
-/* ✅ Make sure all sections fit within screen width */
-* {
-  box-sizing: border-box;
-  max-width: 100%;
-}
-
-/* ✅ Center everything properly */
-.container, section, header, footer, main {
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-/* ✅ Responsive images and media */
-img, video {
-  max-width: 100%;
-  height: auto;
-  display: block;
+@media (max-width: 480px) {
+    .github-stats {
+        grid-template-columns: 1fr;
+    }
 }
