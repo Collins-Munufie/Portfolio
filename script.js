@@ -541,7 +541,6 @@ document.addEventListener("visibilitychange", () => {
 
 
 
-
 (function () {
   emailjs.init("gMN2lw1davVkC4c79");
 })();
@@ -552,13 +551,13 @@ contact.addEventListener("submit", function (e) {
   e.preventDefault();
 
   emailjs
-    .sendForm("service_jqzqqp4", "template_piuw3vg", contact)
+    .sendForm("service_cr6n8y5", "template_9zl6mt7", contact)
     .then(() => {
       alert("Message sent successfully!");
       contact.reset();
     })
-    .catch((error) => {
-      console.error("EmailJS Error:", error);
-      alert("Message failed to send. Try again.");
+    .catch((err) => {
+      console.error(err);
+      alert("Failed to send message");
     });
 });
