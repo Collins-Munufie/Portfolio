@@ -537,3 +537,33 @@ document.addEventListener("visibilitychange", () => {
     startRealTimeTracking();
   }
 });
+
+
+
+
+
+// Load EmailJS
+(function () {
+  emailjs.init("gMN2lw1davVkC4c79");
+})();
+
+const form = document.getElementById("contact-info");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  emailjs.sendForm(
+    "service_jqzqqp4",
+    "template_piuw3vg",
+    this
+  )
+  .then(() => {
+    alert("Message sent successfully!");
+    form.reset();
+  })
+  .catch((error) => {
+    console.error("EmailJS Error:", error);
+    alert("Failed to send message. Try again.");
+  });
+});
+
