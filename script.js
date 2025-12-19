@@ -542,28 +542,23 @@ document.addEventListener("visibilitychange", () => {
 
 
 
-// Load EmailJS
 (function () {
   emailjs.init("gMN2lw1davVkC4c79");
 })();
 
-const form = document.getElementById("contact-info");
+const contact = document.querySelector(".contact-form");
 
-form.addEventListener("submit", function (e) {
+contact.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  emailjs.sendForm(
-    "service_jqzqqp4",
-    "template_piuw3vg",
-    this
-  )
-  .then(() => {
-    alert("Message sent successfully!");
-    form.reset();
-  })
-  .catch((error) => {
-    console.error("EmailJS Error:", error);
-    alert("Failed to send message. Try again.");
-  });
+  emailjs
+    .sendForm("service_jqzqqp4", "template_piuw3vg", contact)
+    .then(() => {
+      alert("Message sent successfully!");
+      contact.reset();
+    })
+    .catch((error) => {
+      console.error("EmailJS Error:", error);
+      alert("Message failed to send. Try again.");
+    });
 });
-
