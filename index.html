@@ -3,31 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collins - Cloud DevOps Engineer</title>
+    <title>Collins Munufie | Cloud DevOps Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="favicon.png">
-
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
+    <!-- Decorative Orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <!-- Navbar -->
+    <nav id="home">
         <div class="container">
-            <div class="logo">Collins<>Munufie</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#github-activity">GitHub</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="burger">
-                <div></div>
-                <div></div>
-                <div></div>
+            <a href="#" class="logo">Munufie<span> Collins</span></a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#github-activity">GitHub</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#blog">Blog</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="burger" id="burger-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
             </div>
         </div>
     </nav>
@@ -35,13 +41,22 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <div class="profile-img">
-                <!-- <i class="fas fa-user"></i> -->
-                <img src="collins.jpg" alt="Collins" style="width: 100%; height: 100%;border-radius: 50%; object-fit:fill;">
+            <div class="profile-header-main">
+                <img id="github-avatar" src="collins.jpg" alt="Collins Munufie" class="github-avatar-hero">
+                <div class="profile-info-hero">
+                    <h1 id="github-name">Collins Munufie</h1>
+                    <p id="github-bio" class="tagline">Cloud Engineer | DevOps Engineer | AWS Certified Cloud Practitioner | Graphic Designer</p>
+                    <div class="hero-actions">
+                        <a href="resume.html" target="_blank" class="cta-button">
+                            <i class="fas fa-file-pdf"></i> View Resume
+                        </a>
+                        <a id="github-link" href="https://github.com/Collins-Munufie" target="_blank" class="cta-button secondary">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#projects" class="cta-button secondary">Projects</a>
+                    </div>
+                </div>
             </div>
-            <h1>Collins Munufie</h1>
-            <p class="tagline"><b>Cloud DevOps Engineer | AWS Certified Cloud Practioner | Graphic Designer</b></p>
-            <a href="#projects" class="cta-button">View My Work</a>
         </div>
     </section>
 
@@ -237,7 +252,7 @@
                 <div class="stat-card">
                     <i class="fas fa-code-branch stat-icon"></i>
                     <h3 class="stat-number" id="repos-count">0</h3>
-                    <p class="stat-label">Public Repositories</p>
+                    <p class="stat-label">Total Repos (Public)</p>
                 </div>
                 <div class="stat-card">
                     <i class="fas fa-star stat-icon"></i>
@@ -282,20 +297,16 @@
             </div>
 
             <div class="github-profile">
-                <div class="profile-header">
-                    <img id="github-avatar" src="" alt="GitHub Avatar" class="github-avatar">
-                    <div class="profile-info">
-                        <h3 id="github-name">Loading...</h3>
-                        <p id="github-bio">Loading bio...</p>
-                        <a id="github-link" href="https://github.com/Collins-Munufie" target="_blank" class="github-profile-link">
-                            <i class="fab fa-github"></i> View GitHub Profile
-                        </a>
-                    </div>
-                </div>
-
                 <div class="recent-repos">
                     <h4>Recent Repositories</h4>
                     <div class="repos-grid"></div>
+                </div>
+
+                <div class="activity-feed-container">
+                    <h4><span class="live-dot"></span> Live Activity Feed</h4>
+                    <div id="activity-feed" class="activity-feed">
+                        <p class="loading-text">Fetching latest activities...</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -382,7 +393,13 @@
     <section id="contact">
         <h2 class="section-title">Get In Touch</h2>
         <div class="contact-container">
-            <form class="contact-form">
+            <form class="contact-form" action="https://formsubmit.co/collinsmunufie2018@gmail.com" method="POST" id="contact-form">
+                <!-- Optional: Success redirection -->
+                <input type="hidden" name="_next" value="https://collinsmunufie.github.io/thanks.html">
+                <!-- Optional: User honeypot to prevent spam -->
+                <input type="text" name="_honey" style="display:none">
+                <!-- Optional: Subject of the email -->
+                <input type="hidden" name="_subject" value="New Portfolio Message!">
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
@@ -403,7 +420,7 @@
                     <i class="fas fa-envelope contact-icon"></i>
                     <div>
                         <h3>Email</h3>
-                        <p>colleyman49@gmail.com</p>
+                        <p>collinsmunufie2018@gmail.com</p>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -414,10 +431,11 @@
                     </div>
                 </div>
                 <div class="contact-item">
-                    <i class="fas fa-phone contact-icon"></i>
+                    <i class="fab fa-whatsapp contact-icon"></i>
                     <div>
-                        <h3>Phone</h3>
+                        <h3>WhatsApp</h3>
                         <p>+233 559 689 849</p>
+                        <a href="https://wa.me/233559689849" target="_blank" class="whatsapp-btn">Chat with me</a>
                     </div>
                 </div>
 
@@ -428,7 +446,7 @@
                     <a href="https://www.linkedin.com/in/collins-munufie/" class="social-link" target="_blank">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="mailto:colleyman49@gmail.com" class="social-link">
+                    <a href="mailto:collinsmunufie2018@gmail.com" class="social-link">
                         <i class="fas fa-envelope"></i>
                     </a>
                     <a href="https://x.com/CMunufie8438" class="social-link" target="_blank">
@@ -441,12 +459,24 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Collins - Cloud DevOps Engineer. All rights reserved.</p>
+        <p>&copy; 2025 Collins - Cloud Engineer | DevOps Engineer. All rights reserved.</p>
         <p>Built with modern web technologies and deployed with CI/CD</p>
     </footer>
 
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content-success">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Message Sent!</h2>
+            <p>Thank you for reaching out. I'll get back to you shortly at your email.</p>
+            <button class="cta-button close-modal-btn">Close</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 </body>
 </html>
