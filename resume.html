@@ -1,233 +1,503 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume | Collins Anane Munufie</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        :root {
-            --primary: #00d9ff;
-            --text-main: #1a202c;
-            --text-light: #4a5568;
-            --border: #e2e8f0;
-        }
+      :root {
+        --primary: #00d9ff;
+        --text-main: #1a202c;
+        --text-light: #4a5568;
+        --border: #e2e8f0;
+      }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Inter', sans-serif; 
-            line-height: 1.6; 
-            color: var(--text-main); 
-            background: #f7fafc;
-            padding: 40px 20px;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        line-height: 1.6;
+        color: var(--text-main);
+        background: #f7fafc;
+        padding: 40px 20px;
+      }
 
-        .resume-container {
-            max-width: 850px;
-            margin: 0 auto;
-            background: white;
-            padding: 60px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-radius: 8px;
-        }
+      .resume-container {
+        max-width: 850px;
+        margin: 0 auto;
+        background: white;
+        padding: 60px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+      }
 
-        header {
-            text-align: center;
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 30px;
-            margin-bottom: 30px;
-        }
+      header {
+        text-align: center;
+        border-bottom: 2px solid var(--primary);
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+      }
 
-        h1 { font-family: 'Outfit', sans-serif; font-size: 2.5rem; color: #000; margin-bottom: 5px; }
-        .subtitle { font-size: 1.2rem; color: var(--primary); font-weight: 600; margin-bottom: 15px; }
-        .contact-info { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; font-size: 0.9rem; color: var(--text-light); }
-        .contact-info span { display: flex; align-items: center; gap: 5px; }
+      h1 {
+        font-family: "Outfit", sans-serif;
+        font-size: 2.5rem;
+        color: #000;
+        margin-bottom: 5px;
+      }
+      .subtitle {
+        font-size: 1.2rem;
+        color: var(--primary);
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+      .contact-info {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        font-size: 0.9rem;
+        color: var(--text-light);
+      }
+      .contact-info span {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
 
-        section { margin-bottom: 30px; }
-        h2 { 
-            font-family: 'Outfit', sans-serif; 
-            font-size: 1.3rem; 
-            text-transform: uppercase; 
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-            color: #000;
-        }
+      section {
+        margin-bottom: 30px;
+      }
+      h2 {
+        font-family: "Outfit", sans-serif;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+        color: #000;
+      }
 
-        .summary p { font-size: 1rem; color: var(--text-light); }
-        .summary ul { margin-top: 10px; padding-left: 20px; color: var(--text-light); }
+      .summary p {
+        font-size: 1rem;
+        color: var(--text-light);
+      }
+      .summary ul {
+        margin-top: 10px;
+        padding-left: 20px;
+        color: var(--text-light);
+      }
 
-        .job, .project { margin-bottom: 20px; }
-        .job-header, .project-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px; }
-        .job-title, .project-title { font-weight: 700; color: #000; }
-        .job-date { font-size: 0.9rem; color: var(--text-light); font-style: italic; }
-        
-        ul { padding-left: 20px; }
-        li { margin-bottom: 5px; color: var(--text-light); font-size: 0.95rem; }
+      .job,
+      .project {
+        margin-bottom: 20px;
+      }
+      .job-header,
+      .project-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 5px;
+      }
+      .job-title,
+      .project-title {
+        font-weight: 700;
+        color: #000;
+      }
+      .job-date {
+        font-size: 0.9rem;
+        color: var(--text-light);
+        font-style: italic;
+      }
 
-        .skills-list { display: flex; flex-wrap: wrap; gap: 10px; }
-        .skill-tag { background: #edf2f7; padding: 4px 12px; border-radius: 4px; font-size: 0.9rem; font-weight: 600; }
+      ul {
+        padding-left: 20px;
+      }
+      li {
+        margin-bottom: 5px;
+        color: var(--text-light);
+        font-size: 0.95rem;
+      }
 
+      .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .skill-tag {
+        background: #edf2f7;
+        padding: 4px 12px;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+
+      .print-btn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: var(--primary);
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0, 217, 255, 0.3);
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      @media print {
         .print-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 50px;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0, 217, 255, 0.3);
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+          display: none;
         }
+        body {
+          padding: 0;
+          background: white;
+        }
+        .resume-container {
+          box-shadow: none;
+          padding: 0;
+          max-width: 100%;
+        }
+      }
 
-        @media print {
-            .print-btn { display: none; }
-            body { padding: 0; background: white; }
-            .resume-container { box-shadow: none; padding: 0; max-width: 100%; }
+      @media (max-width: 600px) {
+        .resume-container {
+          padding: 30px 20px;
         }
-
-        @media (max-width: 600px) {
-            .resume-container { padding: 30px 20px; }
-            .job-header { flex-direction: column; }
+        .job-header {
+          flex-direction: column;
         }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="resume-container">
-        <header>
-            <h1>MUNUFIE COLLINS ANANE</h1>
-            <div class="subtitle">Cloud Engineer, DevOps Engineer</div>
-            <div class="contact-info">
-                <span><i class="fas fa-phone"></i> +233559689849</span>
-                <span><i class="fas fa-envelope"></i> collinsmunufie2018@gmail.com</span>
-                <span><i class="fab fa-linkedin"></i> LinkedIn</span>
-                <span><i class="fab fa-github"></i> GitHub</span>
-            </div>
-        </header>
+      <header>
+        <h1>MUNUFIE COLLINS ANANE</h1>
+        <div class="subtitle">DevOps Engineer</div>
+        <div class="contact-info">
+          <span><i class="fas fa-phone"></i> +233559689849</span>
+          <span
+            ><i class="fas fa-envelope"></i> collinsmunufie2018@gmail.com</span
+          >
+          <span
+            ><i class="fab fa-linkedin"></i>
+            <a
+              href="https://www.linkedin.com/in/collins-munufie/"
+              target="_blank"
+              style="color: var(--text-light); text-decoration: none"
+              >LinkedIn</a
+            ></span
+          >
+          <span
+            ><i class="fab fa-github"></i>
+            <a
+              href="https://github.com/Collins-Munufie"
+              target="_blank"
+              style="color: var(--text-light); text-decoration: none"
+              >GitHub</a
+            ></span
+          >
+          <span
+            ><i class="fas fa-briefcase"></i>
+            <a
+              href="https://collinsmunufie.netlify.app/"
+              target="_blank"
+              style="color: var(--text-light); text-decoration: none"
+              >Portfolio</a
+            ></span
+          >
+        </div>
+      </header>
 
-        <section class="summary">
-            <h2>Profile Summary</h2>
-            <ul>
-                <li>Motivated Information Technology student with cloud and devops experience</li>
-                <li>Hands-on experience designing and automating CI/CD pipelines using GitLab and Docker</li>
-                <li>Strong background in cloud development, serverless architectures, and scalable solutions</li>
-                <li>Proficient in Infrastructure as Code (IaC) using Terraform, automating AWS resources</li>
-            </ul>
-        </section>
+      <section class="summary">
+        <h2>Profile Summary</h2>
+        <p>
+          Results-driven DevOps Engineer with hands-on experience in designing,
+          automation, and deploying scalable cloud-native applications using
+          AWS, Docker, Kubernetes, and Terraform. Proven ability to build CI/CD
+          pipelines, manage infrastructure as code, deploy production ready
+          applications. Strong foundation in cloud computing, automation and
+          system reliability with a passion for building efficient and secure
+          DevOps workflows.
+        </p>
+      </section>
 
-        <section class="experience">
-            <h2>Experience</h2>
-            <div class="job">
-                <div class="job-header">
-                    <span class="job-title">AmaliTech - Internship (Remote)</span>
-                    <span class="job-date">September 2024 - January 2025</span>
-                </div>
-                <ul>
-                    <li>Accomplished 3-month intensive AWS re/Start program, acquiring hands-on experience with core AWS services including EC2, S3, Lambda, API Gateway, DynamoDB, and RDS.</li>
-                    <li>Built and deployed cloud-based applications, implementing serverless architectures, and automating workflows using AWS Lambda and API functions.</li>
-                    <li>Designed and managed CI/CD pipelines using Jenkins, Docker, and Kubernetes for seamless application deployment on AWS EC2 instances.</li>
-                </ul>
-            </div>
+      <section class="experience">
+        <h2>Experience</h2>
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">AmaliTech (Remote)</span>
+            <span class="job-date">Sept 2024 - Jan 2025</span>
+          </div>
+          <ul>
+            <li>
+              Completed intensive AWS re/Start program with practical exposure
+              to real-world cloud environment
+            </li>
+            <li>
+              Designed and deployed serverless applications using AWS Lambda and
+              API Gateway
+            </li>
+            <li>
+              Built CI/CD pipelines using Jenkins and Docker, improving
+              deployment efficiency and consistency
+            </li>
+            <li>Deployed and managed containerized application on AWS</li>
+            <li>
+              Gained hands-on experience wit scalable architecture and cloud
+              best practices
+            </li>
+          </ul>
+        </div>
 
-            <div class="job">
-                <div class="job-header">
-                    <span class="job-title">Fundamentals of Devops on AWS | Simplilearn – Skillup</span>
-                    <span class="job-date">August - September 2025</span>
-                </div>
-                <ul>
-                    <li>Gained foundational knowledge of DevOps principles, culture, and practices for cloud-based environments.</li>
-                    <li>Learned how to implement CI/CD pipelines on AWS for faster and more reliable deployments.</li>
-                    <li>Understood Infrastructure as Code (IaC) concepts and how they are applied using AWS CloudFormation and Terraform.</li>
-                    <li>Explored AWS DevOps services such as CodeCommit, CodeBuild, CodeDeploy, and CodePipeline.</li>
-                </ul>
-            </div>
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title"
+              >Fundamentals of DevOps on AWS | Simplilearn – Skillup</span
+            >
+            <span class="job-date">August - September 2025</span>
+          </div>
+          <ul>
+            <li>
+              Gained foundational knowledge of DevOps principles, culture, and
+              practices for cloud-based environments.
+            </li>
+            <li>
+              Learned how to implement CI/CD pipelines on AWS for faster and
+              more reliable deployments
+            </li>
+            <li>
+              Understood Infrastructure as Code (IaC) concepts and how they are
+              applied using AWS CloudFormation and Terraform
+            </li>
+            <li>
+              Explored AWS DevOps services such as CodeCommit, CodeBuild,
+              CodeDeploy, and CodePipeline.
+            </li>
+          </ul>
+        </div>
 
-            <div class="job">
-                <div class="job-header">
-                    <span class="job-title">Thrive Africa Cloud Computing – Internship (Remote)</span>
-                    <span class="job-date">October 2025 - Present</span>
-                </div>
-                <ul>
-                    <li>Learned and applied DevOps practices such as CI/CD, Infrastructure as Code (IaC), and automation using Terraform and Docker.</li>
-                    <li>Collaborated with teams on real-world projects, improving teamwork, documentation, and technical communication skills.</li>
-                    <li>Configured and monitored cloud environments, ensuring cost optimization and security compliance.</li>
-                </ul>
-            </div>
-        </section>
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title"
+              >Cloud Engineer – ML Infrastructure (Project)</span
+            >
+            <span class="job-date">March 2026</span>
+          </div>
+          <div style="font-weight: 600; margin-bottom: 8px">
+            MLflow Deployment on Google Cloud Platform (GCP)
+          </div>
+          <ul>
+            <li>
+              Collaborated with a Machine Learning Team to designed and
+              documented a scalable MLflow architecture using Cloud Run, Google
+              Cloud Storage (GCS), and Cloud SQL (PostgreSQL) for experiment
+              tracking and artifact management
+            </li>
+            <li>
+              Planned deployment of a containerized MLflow tracking server using
+              Docker for serverless execution on Cloud Run
+            </li>
+            <li>
+              Designed IAM roles and service account strategies to enforce
+              least-privilege access between cloud services
+            </li>
+          </ul>
+        </div>
 
-        <section class="projects">
-            <h2>Projects</h2>
-            <div class="project">
-                <div class="project-header">
-                    <span class="project-title">Resume Website on AWS | AWS S3, CloudFront, Route 53</span>
-                </div>
-                <ul>
-                    <li>Designed and hosted a personal portfolio website using AWS static hosting services.</li>
-                    <li>Configured CloudFront CDN and Route 53 for global low-latency access, cutting page load times by 50%.</li>
-                    <li>Achieved 100% uptime with cost-effective AWS free-tier deployment.</li>
-                </ul>
-            </div>
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title"
+              >Thrive Africa Cloud Computing – Internship (Remote)</span
+            >
+          </div>
+          <ul>
+            <li>
+              Implementing DevOps practices including CI/CD, Infrastructure as
+              Code, and automation
+            </li>
+            <li>
+              Provisioning and managing cloud infrastructure using Terraform
+            </li>
+            <li>
+              Collaborating on real-world DevOps projects, improving deployment
+              workflows and documentation
+            </li>
+            <li>
+              Monitoring cloud environments for performance, cost optimization,
+              and reliability
+            </li>
+          </ul>
+        </div>
+      </section>
 
-            <div class="project">
-                <div class="project-header">
-                    <span class="project-title">Deploy a React App using Ubuntu (AWS EC2)</span>
-                </div>
-                <ul>
-                    <li>Launched and configured an Ubuntu-based AWS EC2 instance to host a production-ready React application.</li>
-                    <li>Configured firewall and security groups on AWS EC2 to allow HTTP/HTTPS traffic securely.</li>
-                </ul>
-            </div>
+      <section class="projects">
+        <h2>Projects</h2>
+        <div class="project">
+          <div class="project-header">
+            <span class="project-title"
+              >Kubernetes-Based E-Commerce Deployment</span
+            >
+          </div>
+          <ul>
+            <li>
+              Deployed a full scale microservice based e-commerce application
+              using Kubernetes
+            </li>
+            <li>
+              Containerized application services using Docker for consistent
+              deployment across environment
+            </li>
+            <li>
+              Configured Kubernetes resources including Deployments, services
+              and pods for orchestration
+            </li>
+            <li>
+              Implemented monitoring and observability using Prometheus and
+              Grafana enabling real time metrics tracking and visualization
+            </li>
+            <li>
+              Automated deployment workflows and managed cluster configurations
+            </li>
+          </ul>
+        </div>
 
-            <div class="project">
-                <div class="project-header">
-                    <span class="project-title">Deployed an E-commerce website</span>
-                </div>
-                <ul>
-                    <li>Set up an automated deployment pipelines for an e-commerce website developed by a third party using Terraform.</li>
-                    <li>This collaboration encouraged me to see how teamwork accelerates learning and project delivery.</li>
-                </ul>
-            </div>
-        </section>
+        <div class="project">
+          <div class="project-header">
+            <span class="project-title">React App Deployment on AWS EC2</span>
+          </div>
+          <ul>
+            <li>
+              Deployed a production-ready React application on Ubuntu EC2
+              instance
+            </li>
+            <li>
+              Configured security groups and firewall rules for secure
+              HTTP/HTTPS access
+            </li>
+            <li>
+              Managed server environment and application deployment lifecycle
+            </li>
+          </ul>
+        </div>
 
-        <section class="skills">
-            <h2>Technical Skills</h2>
-            <div class="skills-list">
-                <span class="skill-tag">AWS (EC2, S3, Lambda, RDS, API Gateway)</span>
-                <span class="skill-tag">Docker</span>
-                <span class="skill-tag">Kubernetes</span>
-                <span class="skill-tag">Jenkins</span>
-                <span class="skill-tag">Terraform</span>
-                <span class="skill-tag">GitHub Actions</span>
-                <span class="skill-tag">Git/GitHub</span>
-                <span class="skill-tag">Data Analysis</span>
-                <span class="skill-tag">Research Writing</span>
-            </div>
-        </section>
+        <div class="project">
+          <div class="project-header">
+            <span class="project-title"
+              >Automated E-Commerce Deployment (Terraform)</span
+            >
+          </div>
+          <ul>
+            <li>
+              Built infrastructure using Terraform to deploy an e-commerce
+              application
+            </li>
+            <li>
+              Automated provisioning of AWS resources for consistent deployment
+            </li>
+            <li>Demonstrated infrastructure as Code (IaC) best practices.</li>
+          </ul>
+        </div>
+      </section>
 
-        <section class="education-certifications">
-            <h2>Education & Certifications</h2>
-            <div class="job">
-                <div class="job-header">
-                    <span class="job-title">University of Energy and Natural Resources</span>
-                    <span class="job-date">Expected 2026</span>
-                </div>
-                <p>Bachelor of Science, Information Technology</p>
-            </div>
-            <ul>
-                <li>AWS Certified Cloud Practitioner (CCP) - Jan 2025</li>
-                <li>Fundamental of DevOps on AWS</li>
-            </ul>
-        </section>
+      <section class="skills">
+        <h2>Technical Skills</h2>
+        <div style="margin-bottom: 15px">
+          <strong style="color: #000">Cloud Platforms:</strong>
+          <div class="skills-list" style="margin-top: 8px">
+            <span class="skill-tag"
+              >AWS (EC2, S3, Lambda, API Gateway, RDS, DynamoDB, CloudFront,
+              Route 53)</span
+            >
+          </div>
+        </div>
+        <div style="margin-bottom: 15px">
+          <strong style="color: #000">DevOps and Tools:</strong>
+          <div class="skills-list" style="margin-top: 8px">
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Kubernetes</span>
+            <span class="skill-tag">Jenkins</span>
+            <span class="skill-tag">GitHub Actions</span>
+            <span class="skill-tag">GitLab CI/CD</span>
+            <span class="skill-tag">Prometheus and Grafana</span>
+          </div>
+        </div>
+        <div style="margin-bottom: 15px">
+          <strong style="color: #000">Infrastructure as Code:</strong>
+          <div class="skills-list" style="margin-top: 8px">
+            <span class="skill-tag">Terraform</span>
+            <span class="skill-tag">AWS CloudFormation</span>
+          </div>
+        </div>
+        <div style="margin-bottom: 15px">
+          <strong style="color: #000">Operating Systems:</strong>
+          <div class="skills-list" style="margin-top: 8px">
+            <span class="skill-tag">Linux (Ubuntu)</span>
+            <span class="skill-tag">Windows</span>
+          </div>
+        </div>
+        <div>
+          <strong style="color: #000">Other Skills:</strong>
+          <div class="skills-list" style="margin-top: 8px">
+            <span class="skill-tag">CI/CD Pipelines</span>
+            <span class="skill-tag">System Monitoring</span>
+            <span class="skill-tag">Automation</span>
+            <span class="skill-tag">Networking Fundamentals</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="education-certifications">
+        <h2>Education & Certifications</h2>
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title"
+              >University of Energy and Natural Resources (UENR)</span
+            >
+            <span class="job-date">Expected: 2026</span>
+          </div>
+          <p>Bachelor of Science in Information Technology</p>
+        </div>
+        <div style="margin-top: 15px">
+          <h3
+            style="
+              font-size: 1rem;
+              font-weight: 600;
+              color: #000;
+              margin-bottom: 8px;
+            "
+          >
+            Certifications
+          </h3>
+          <ul>
+            <li>
+              Kubernetes and Cloud Native Essentials (LFS250) – The Linux
+              Foundation
+            </li>
+            <li>AWS Certified Cloud (2025) – AmaliTech (AWS)</li>
+            <li>DevOps on AWS - Simplilearn</li>
+          </ul>
+        </div>
+      </section>
     </div>
 
     <button class="print-btn" onclick="window.print()">
-        <i class="fas fa-print"></i> Print / Save as PDF
+      <i class="fas fa-print"></i> Print / Save as PDF
     </button>
-</body>
+  </body>
 </html>
