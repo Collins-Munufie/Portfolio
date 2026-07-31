@@ -157,14 +157,18 @@ nav .container {
 
 /* Hero Section */
 .hero {
-  min-height: 65vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px 1.5rem 24px;
+  padding: 35px 1.5rem 16px;
   text-align: center;
   position: relative;
+}
+
+#about {
+  margin-top: 1rem;
 }
 
 .profile-header-main {
