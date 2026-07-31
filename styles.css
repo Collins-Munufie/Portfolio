@@ -3,6 +3,10 @@
   Refined to match user-provided design reference.
 */
 
+html {
+  font-size: 112.5%;
+}
+
 :root {
   /* Color Palette - uTest-inspired */
   --primary: #ffcb01;
