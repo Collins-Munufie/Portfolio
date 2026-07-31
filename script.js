@@ -484,10 +484,14 @@ function createContributionChart(data) {
       ],
     },
     options: {
+      responsive: true,
+      maintainAspectRatio: false,
       plugins: { legend: { display: false } },
       scales: { y: { beginAtZero: true } },
     },
   });
+  ctx.style.width = "100%";
+  ctx.style.height = "auto";
 }
 
 function createLanguagesChart(repos) {
@@ -518,7 +522,14 @@ function createLanguagesChart(repos) {
         },
       ],
     },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { position: "bottom" } },
+    },
   });
+  ctx.style.width = "100%";
+  ctx.style.height = "auto";
 }
 
 function createRepoStatsChart(repos) {
@@ -546,8 +557,18 @@ function createRepoStatsChart(repos) {
         },
       ],
     },
-    options: { plugins: { legend: { display: false } } },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { ticks: { autoSkip: false }, grid: { display: false } },
+        y: { beginAtZero: true },
+      },
+    },
   });
+  ctx.style.width = "100%";
+  ctx.style.height = "auto";
 }
 
 function displayRecentRepos(repos) {

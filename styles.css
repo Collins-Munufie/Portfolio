@@ -18,7 +18,8 @@ body {
 img,
 video,
 iframe,
-svg {
+svg,
+canvas {
   max-width: 100%;
   height: auto;
   display: block;
@@ -32,6 +33,26 @@ button,
 .cert-view-button,
 .whatsapp-btn {
   min-height: 44px;
+}
+
+canvas {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.github-stats,
+.repos-grid,
+.activity-feed,
+.charts-grid,
+.skill-item,
+.contact-form,
+.cert-card,
+.project-card,
+.repo-card,
+.activity-item,
+.contact-item {
+  min-width: 0;
 }
 
 :root {
@@ -159,11 +180,13 @@ nav .container {
   margin: 0 auto;
   padding: 0 1.5rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
+  gap: 1rem;
 }
 
 .logo {
+  order: 2;
   font-size: 1.6rem;
   font-weight: 900;
   text-decoration: none;
@@ -173,7 +196,9 @@ nav .container {
 
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
+  margin-left: auto;
+  justify-content: flex-end;
 }
 
 .nav-links a {
@@ -496,22 +521,41 @@ footer {
 /* GitHub Activity */
 .github-container {
   display: grid;
+  grid-template-columns: 1fr;
   gap: 1.75rem;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 20px;
   padding: 2rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .github-stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
   margin-bottom: 1.5rem;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  justify-content: space-between;
+}
+
+.github-stats > .stat-card {
+  flex: 1 1 min(220px, 100%);
+  min-width: 180px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .stat-card {
   text-align: center;
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 .stat-card.loading {
@@ -559,6 +603,7 @@ footer {
   margin-top: 2rem;
   border-top: 1px solid var(--border);
   padding-top: 1.5rem;
+  min-width: 0;
 }
 
 .profile-header {
@@ -648,6 +693,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1rem;
+  min-width: 0;
 }
 
 .activity-item {
@@ -731,10 +777,79 @@ footer {
   color: var(--text-muted);
 }
 
+.contribution-graph-container {
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 1rem 0;
+  min-height: 320px;
+}
+
+.contribution-graph-container h3 {
+  margin-bottom: 1rem;
+}
+
+.contribution-graph-container canvas {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
+  min-height: 280px;
+  display: block;
+}
+
 .charts-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+.chart-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .github-container {
+    padding: 1.5rem;
+  }
+
+  .github-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contribution-graph-container {
+    min-height: 280px;
+  }
+
+  .contribution-graph-container canvas {
+    height: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .github-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .contribution-graph-container canvas {
+    height: 240px !important;
+  }
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
   margin-top: 3rem;
 }
 
@@ -743,6 +858,7 @@ footer {
   padding: 1.5rem;
   border-radius: var(--radius);
   border: 1px solid var(--border);
+  min-width: 0;
 }
 
 /* Certifications */
