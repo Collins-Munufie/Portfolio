@@ -690,10 +690,17 @@ footer {
 }
 
 .activity-feed {
+  /* Force a single-column vertical list to avoid horizontal overflow
+     caused by auto-fit grids when many items are present. Limit height
+     so the page doesn't grow indefinitely; allow internal scrolling. */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1rem;
   min-width: 0;
+  max-height: 520px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 0.25rem; /* give space for scrollbar */
 }
 
 .activity-item {
@@ -784,7 +791,9 @@ footer {
   overflow-x: hidden;
   box-sizing: border-box;
   padding: 1rem 0;
-  min-height: 320px;
+  /* Limit contribution graph height to avoid unbounded vertical growth */
+  max-height: 420px;
+  overflow: hidden;
 }
 
 .contribution-graph-container h3 {
@@ -794,8 +803,11 @@ footer {
 .contribution-graph-container canvas {
   width: 100% !important;
   max-width: 100% !important;
-  height: 100% !important;
-  min-height: 280px;
+  /* Use a fixed canvas height so Chart.js cannot expand the element
+     based on container content. This prevents the page from growing
+     indefinitely when charts or their datasets change. */
+  height: 320px !important;
+  min-height: 220px;
   display: block;
 }
 
@@ -816,6 +828,13 @@ footer {
   min-width: 0;
   max-width: 100%;
   box-sizing: border-box;
+  /* Keep charts from expanding vertically and provide internal scroll if needed */
+  max-height: 380px;
+  overflow: hidden;
+}
+
+.chart-container canvas {
+  height: 260px !important;
 }
 
 @media (max-width: 1024px) {
@@ -828,11 +847,11 @@ footer {
   }
 
   .contribution-graph-container {
-    min-height: 280px;
+    max-height: 340px;
   }
 
   .contribution-graph-container canvas {
-    height: 100% !important;
+    height: 280px !important;
   }
 }
 
@@ -842,7 +861,10 @@ footer {
   }
 
   .contribution-graph-container canvas {
-    height: 240px !important;
+    height: 220px !important;
+  }
+  .activity-feed {
+    max-height: 360px;
   }
 }
 

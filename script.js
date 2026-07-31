@@ -178,6 +178,24 @@ function setupCertificateModal() {
 // --- GitHub Integration & Charts ---
 
 async function fetchGitHubData(force = false) {
+  // If the page is opened via file:// the browser may block network requests
+  // (CORS / mixed content / local file restrictions). Provide a friendly
+  // fallback instead of repeatedly failing.
+  if (
+    typeof window !== "undefined" &&
+    window.location &&
+    window.location.protocol === "file:"
+  ) {
+    console.warn(
+      "Running from file:// — skipping live GitHub fetch (use a local HTTP server to enable API calls).",
+    );
+    showFallbackLink(
+      "Running locally from file:// — start a local server to enable live GitHub data, or view the profile on GitHub.",
+    );
+    loadCachedDataFallback();
+    return;
+  }
+
   // Check Cache first
   if (!force) {
     const cached = localStorage.getItem(CACHE_KEY);
@@ -192,24 +210,51 @@ async function fetchGitHubData(force = false) {
       }
     }
   }
-
   try {
     showLoadingState();
+
+    // Helper: fetch with timeout
+    const fetchWithTimeout = (url, opts = {}, timeout = 10000) => {
+      return Promise.race([
+        fetch(url, opts),
+        new Promise((_, rej) =>
+          setTimeout(() => rej(new Error("Timeout")), timeout),
+        ),
+      ]);
+    };
+
+    // Helper: simple retry wrapper for transient failures
+    const retryFetch = async (
+      url,
+      opts = {},
+      attempts = 2,
+      timeout = 10000,
+    ) => {
+      let lastErr = null;
+      for (let i = 0; i < attempts; i++) {
+        try {
+          const res = await fetchWithTimeout(url, opts, timeout);
+          return res;
+        } catch (err) {
+          lastErr = err;
+          // small backoff
+          await new Promise((r) => setTimeout(r, 300 * (i + 1)));
+        }
+      }
+      throw lastErr;
+    };
+
     const [userRes, reposRes, eventsRes] = await Promise.all([
-      fetch(`https://api.github.com/users/${GITHUB_USERNAME}`, {
+      retryFetch(`https://api.github.com/users/${GITHUB_USERNAME}`, {
         headers: GITHUB_API_HEADERS,
       }),
-      fetch(
+      retryFetch(
         `https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100&sort=updated`,
-        {
-          headers: GITHUB_API_HEADERS,
-        },
+        { headers: GITHUB_API_HEADERS },
       ),
-      fetch(
+      retryFetch(
         `https://api.github.com/users/${GITHUB_USERNAME}/events/public?per_page=100`,
-        {
-          headers: GITHUB_API_HEADERS,
-        },
+        { headers: GITHUB_API_HEADERS },
       ),
     ]);
 
