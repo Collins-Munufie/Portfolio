@@ -4,63 +4,173 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Collins Munufie | Cloud DevOps Portfolio</title>
+  <title>Munufie Collins Anane | DevOps Engineer & Software Developer</title>
+  <meta name="description"
+    content="Official portfolio of Munufie Collins Anane — DevOps Engineer, Cloud Practitioner, QA Tester, and Frontend Developer specializing in AWS, Docker, Kubernetes, Terraform, and CI/CD automation." />
+  <meta name="keywords"
+    content="Munufie Collins Anane, Collins Munufie, DevOps Engineer, AWS, Terraform, Kubernetes, Docker, CI/CD, React, uTest, QA Tester, Ghana" />
+  <meta name="author" content="Munufie Collins Anane" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://collinsmunufie.netlify.app/" />
+  <meta property="og:title" content="Munufie Collins Anane | DevOps Engineer" />
+  <meta property="og:description"
+    content="DevOps Engineer with hands-on experience across AWS Cloud, Kubernetes, Docker, Terraform, CI/CD, QA testing, and full-stack development." />
+  <meta property="og:image" content="collins.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://collinsmunufie.netlify.app/" />
+  <meta property="twitter:title" content="Munufie Collins Anane | DevOps Engineer" />
+  <meta property="twitter:description"
+    content="DevOps Engineer with hands-on experience across AWS Cloud, Kubernetes, Docker, Terraform, CI/CD, QA testing, and full-stack development." />
+  <meta property="twitter:image" content="collins.jpg" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Munufie Collins Anane",
+    "url": "https://collinsmunufie.netlify.app/",
+    "image": "https://collinsmunufie.netlify.app/collins.jpg",
+    "jobTitle": "DevOps Engineer",
+    "alumniOf": "University of Energy and Natural Resources (UENR)",
+    "sameAs": [
+      "https://github.com/Collins-Munufie",
+      "https://www.linkedin.com/in/collins-munufie/",
+      "https://x.com/CMunufie8438"
+    ],
+    "knowsAbout": [
+      "Amazon Web Services (AWS)",
+      "DevOps",
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "CI/CD Pipelines",
+      "Software Quality Assurance",
+      "React",
+      "Python"
+    ]
+  }
+  </script>
+
+  <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 
 <body>
-  <!-- Decorative Orbs -->
+  <!-- Decorative Ambient Orbs -->
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
   <div class="orb orb-3"></div>
-  <!-- Navbar -->
-  <nav id="home">
-    <div class="container">
-      <!-- <a href="#" class="logo">Munufie<span> Collins</span></a> -->
-      <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#github-activity">GitHub</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- Navigation Bar -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <span class="logo-bracket">&lt;</span>Collins<span class="logo-accent">.Munufie</span><span class="logo-bracket"> /&gt;</span>
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#devops-hub" class="nav-link">DevOps Hub</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#github-activity" class="nav-link">GitHub</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </div>
-      <div class="burger" id="burger-menu">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
+
+      <div class="nav-actions">
+        <a href="resume.html" target="_blank" class="nav-cta-btn">
+          <i class="fas fa-file-alt"></i> <span>CV / Resume</span>
+        </a>
+        <button class="burger" id="burger-menu" aria-label="Toggle navigation menu">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </button>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <div class="profile-header-main">
-        <img id="github-avatar" src="collins.jpg" alt="Collins Munufie" class="github-avatar-hero" />
-        <div class="profile-info-hero">
-          <h1 id="github-name">Collins Munufie</h1>
-          <p id="github-bio" class="tagline">
-            Information Technology Professional | Software Development | Cloud
-            Devops Engineering
+  <section id="home" class="hero-section">
+    <div class="hero-wrapper">
+      <div class="profile-card-hero">
+        <div class="avatar-container">
+          <div class="avatar-glow-ring"></div>
+          <img id="github-avatar" src="collins.jpg" alt="Munufie Collins Anane" class="hero-avatar" />
+          <div class="status-indicator" title="Available for DevOps & Engineering Opportunities">
+            <span class="status-dot"></span>
+          </div>
+        </div>
+
+        <div class="hero-details">
+          <div class="availability-pill">
+            <span class="pulse-dot"></span> Open to DevOps, Cloud & QA Engineering Roles
+          </div>
+          <h1 class="hero-name" id="github-name">Munufie Collins Anane</h1>
+          <div class="typewriter-container">
+            <span class="typewriter-prefix">I specialize in </span>
+            <span class="typewriter-text" id="typewriter"></span>
+            <span class="cursor-blink">|</span>
+          </div>
+          <p class="hero-bio" id="github-bio">
+            DevOps Engineer with hands-on experience deploying and managing cloud environments on AWS using Docker, Kubernetes, Terraform, and CI/CD pipelines via Jenkins and GitLab CI. Certified uTest tester delivering high-quality, production-ready software systems.
           </p>
+
           <div class="hero-actions">
-            <a href="resume.html" target="_blank" class="cta-button">
-              <i class="fas fa-file-pdf"></i> View Resume
+            <a href="resume.html" target="_blank" class="cta-button primary">
+              <i class="fas fa-file-pdf"></i> View Resume / CV
             </a>
-            <a id="github-link" href="https://github.com/Collins-Munufie" target="_blank" class="cta-button secondary">
-              <i class="fab fa-github"></i> GitHub
+            <a href="#projects" class="cta-button secondary">
+              <i class="fas fa-layer-group"></i> Featured Projects
             </a>
-            <a href="#projects" class="cta-button secondary">Projects</a>
+            <button type="button" class="cta-button outline" id="copy-email-btn" data-email="collinsmunufie2018@gmail.com">
+              <i class="fas fa-copy"></i> Copy Email
+            </button>
+            <a id="github-link" href="https://github.com/Collins-Munufie" target="_blank" class="cta-button ghost" aria-label="GitHub Profile">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/collins-munufie/" target="_blank" class="cta-button ghost" aria-label="LinkedIn Profile">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+
+          <!-- Quick Highlight Metrics -->
+          <div class="hero-quick-stats">
+            <div class="quick-stat-item">
+              <i class="fab fa-aws"></i>
+              <span>AWS Certified</span>
+            </div>
+            <div class="quick-stat-item">
+              <i class="fas fa-dharmachakra"></i>
+              <span>Kubernetes & Docker</span>
+            </div>
+            <div class="quick-stat-item">
+              <i class="fas fa-code-branch"></i>
+              <span>CI/CD & Terraform</span>
+            </div>
+            <div class="quick-stat-item">
+              <i class="fas fa-vial-circle-check"></i>
+              <span>uTest Certified QA</span>
+            </div>
           </div>
         </div>
       </div>
@@ -68,205 +178,485 @@
   </section>
 
   <!-- About Section -->
-  <section id="about">
-    <h2 class="section-title">About Me</h2>
-    <div class="about-content">
-      <div class="about-text">
+  <section id="about" class="content-section">
+    <div class="section-header">
+      <span class="section-tag">Profile Summary</span>
+      <h2 class="section-title">Reliable, Scalable & Well-Monitored Systems</h2>
+      <p class="section-subtitle">Bridging DevOps infrastructure, software quality assurance, and frontend development.</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-card bio-card">
+        <div class="bio-header">
+          <i class="fas fa-user-astronaut bio-icon"></i>
+          <h3>Professional Profile</h3>
+        </div>
         <p>
-          Final-year Information Technology student with a strong foundation
-          in software development, cloud computing, and DevOps practices,
-          gained through hands-on projects and structured training programs.
-          Comfortable working across technical and business functions, with
-          experience in process documentation, automation, and
-          cross-functional collaboration. Adaptable, detail-oriented, and
-          eager to bring problem-solving and technology skills to support
-          Petra's operations, digital initiatives, and client-focused
-          solutions during National Service.
+          Final-year Information Technology student at the University of Energy and Natural Resources (UENR), with hands-on professional experience in DevOps engineering, cloud infrastructure, software quality assurance, and frontend development.
         </p>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-item">
-          <i class="fab fa-aws"></i>
-          <strong>AWS Cloud Platform</strong>
-        </div>
-        <div class="skill-item">
-          <i class="fas fa-code-branch"></i>
-          <strong>Terraform & CloudFormation</strong>
-        </div>
-        <div class="skill-item">
-          <i class="fas fa-ship"></i>
-          <strong>Docker & Kubernetes</strong>
-        </div>
-        <div class="skill-item">
-          <i class="fas fa-sync-alt"></i>
-          <strong>CI/CD Pipelines</strong>
-        </div>
-        <div class="skill-item">
-          <i class="fab fa-python"></i>
-          <strong>Python & Bash</strong>
-        </div>
-        <div class="skill-item">
-          <i class="fas fa-chart-line"></i>
-          <strong>Prometheus & Grafana</strong>
-        </div>
-        <div class="skill-item">
-          <i class="fab fa-github"></i>
-          <strong>GitHub Actions</strong>
-        </div>
-        <div class="skill-item">
-          <i class="fab fa-jenkins"></i>
-          <strong>Jenkins</strong>
-        </div>
-      </div>
-      <!-- <div class="cert-badge-row">
-          <h3 class="cert-badge-title">Certifications</h3>
-          <div class="cert-badges">
-            <span class="cert-badge"
-              >Kubernetes &amp; Cloud Native Essentials</span
-            >
-            <span class="cert-badge">AWS Certified Cloud Practitioner</span>
-            <span class="cert-badge">Fundamentals of DevOps on AWS</span>
+        <p>
+          Proven track record deploying and managing cloud environments on AWS using Docker, Kubernetes, Terraform, and CI/CD pipelines through Jenkins and GitLab CI. Official uTest-certified tester with experience across functional, performance, visual, and content testing on production-grade software.
+        </p>
+        <p>
+          Adept at process documentation, automation, and cross-functional collaboration across remote and institutional environments. Detail-oriented and results-driven, with a strong foundation in building reliable, scalable, and well-monitored software systems.
+        </p>
+        
+        <div class="bio-highlights">
+          <div class="highlight-item">
+            <div class="highlight-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div>
+              <strong>B.Sc. Information Technology</strong>
+              <small>University of Energy and Natural Resources (UENR) | 2022 – 2026</small>
+            </div>
           </div>
-        </div> -->
+          <div class="highlight-item">
+            <div class="highlight-icon"><i class="fas fa-award"></i></div>
+            <div>
+              <strong>Multi-Certified Cloud & DevOps Professional</strong>
+              <small>AWS Certified, Linux Foundation (K8s), Simplilearn, uTest QA</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Categorized Skills Grid -->
+      <div class="about-card skills-container-card">
+        <div class="skills-header">
+          <i class="fas fa-terminal skills-icon"></i>
+          <h3>Relevant Skills Matrix</h3>
+        </div>
+
+        <div class="skills-categories">
+          <!-- Category 1: Cloud & DevOps -->
+          <div class="skill-category-group">
+            <h4 class="category-title"><i class="fab fa-aws"></i> Cloud Platforms & IaC</h4>
+            <div class="skill-tags">
+              <span class="skill-pill"><i class="fab fa-aws"></i> AWS (EC2, S3, Lambda, API Gateway)</span>
+              <span class="skill-pill"><i class="fas fa-database"></i> RDS & DynamoDB</span>
+              <span class="skill-pill"><i class="fas fa-network-wired"></i> CloudFront & Route 53</span>
+              <span class="skill-pill"><i class="fas fa-code-branch"></i> Terraform</span>
+              <span class="skill-pill"><i class="fas fa-cloud"></i> AWS CloudFormation</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Containers & CI/CD -->
+          <div class="skill-category-group">
+            <h4 class="category-title"><i class="fas fa-dharmachakra"></i> DevOps, Containers & CI/CD</h4>
+            <div class="skill-tags">
+              <span class="skill-pill"><i class="fab fa-docker"></i> Docker & Compose</span>
+              <span class="skill-pill"><i class="fas fa-ship"></i> Kubernetes (K8s)</span>
+              <span class="skill-pill"><i class="fab fa-jenkins"></i> Jenkins CI/CD</span>
+              <span class="skill-pill"><i class="fab fa-github"></i> GitHub Actions</span>
+              <span class="skill-pill"><i class="fab fa-gitlab"></i> GitLab CI</span>
+              <span class="skill-pill"><i class="fas fa-terminal"></i> Shell / Bash Scripting</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Web, QA & Monitoring -->
+          <div class="skill-category-group">
+            <h4 class="category-title"><i class="fas fa-vial-circle-check"></i> Quality Assurance, Web & Monitoring</h4>
+            <div class="skill-tags">
+              <span class="skill-pill"><i class="fas fa-check-double"></i> Functional & Performance Testing</span>
+              <span class="skill-pill"><i class="fas fa-bug"></i> Defect Reporting (uTest)</span>
+              <span class="skill-pill"><i class="fab fa-react"></i> React & TypeScript</span>
+              <span class="skill-pill"><i class="fab fa-js"></i> JavaScript & REST APIs</span>
+              <span class="skill-pill"><i class="fas fa-chart-line"></i> Prometheus & Grafana</span>
+              <span class="skill-pill"><i class="fab fa-linux"></i> Linux & Windows Admin</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Timeline Section -->
+  <section id="experience" class="content-section">
+    <div class="section-header">
+      <span class="section-tag">Track Record</span>
+      <h2 class="section-title">Professional Experience</h2>
+      <p class="section-subtitle">Real-world engineering, cloud architecture, QA testing, and institutional design roles.</p>
+    </div>
+
+    <div class="experience-timeline">
+      <!-- Role 1: 404 Paradox Labs -->
+      <div class="timeline-card">
+        <div class="timeline-header">
+          <div class="timeline-role-info">
+            <h3>Frontend Developer</h3>
+            <span class="timeline-company"><i class="fas fa-building"></i> 404 Paradox Labs</span>
+          </div>
+          <span class="timeline-date"><i class="fas fa-calendar-alt"></i> Jun 2026 – Present</span>
+        </div>
+        <ul class="timeline-list">
+          <li>Developing user-facing features for a telemedicine platform serving patient-facing workflows including appointment booking, using React, JavaScript, HTML, and CSS.</li>
+          <li>Built and delivered responsive, accessible UI components that reduced cross-device rendering inconsistencies across 3+ screen breakpoints.</li>
+          <li>Translated product and design requirements into functional React components, collaborating within a team of 4 developers on an agile delivery cycle.</li>
+          <li>Debugged and resolved UI behaviour issues across mobile and desktop environments, improving interface consistency and reducing reported frontend bugs.</li>
+        </ul>
+      </div>
+
+      <!-- Role 2: uTest -->
+      <div class="timeline-card">
+        <div class="timeline-header">
+          <div class="timeline-role-info">
+            <h3>Software Quality Assurance Tester</h3>
+            <span class="timeline-company"><i class="fas fa-globe"></i> uTest (Applause) – Remote</span>
+          </div>
+          <span class="timeline-date"><i class="fas fa-calendar-alt"></i> May 2026 – Present</span>
+        </div>
+        <ul class="timeline-list">
+          <li>Conducted functional, performance, visual, and content testing on live software products for global technology clients across web and mobile platforms.</li>
+          <li>Identified, documented, and reported defects with clear reproduction steps, expected vs. actual behaviour, and severity ratings using uTest's test management platform.</li>
+          <li>Executed test cycles across multiple devices, browsers, and operating systems, successfully testing 22 production-grade software products to date.</li>
+          <li>Maintained active tester status on the uTest platform, contributing to crowd-sourced QA efforts that support software quality before public release.</li>
+        </ul>
+      </div>
+
+      <!-- Role 3: Thrive Africa -->
+      <div class="timeline-card">
+        <div class="timeline-header">
+          <div class="timeline-role-info">
+            <h3>Cloud Computing Intern</h3>
+            <span class="timeline-company"><i class="fas fa-cloud"></i> Thrive Africa – Remote</span>
+          </div>
+          <span class="timeline-date"><i class="fas fa-calendar-alt"></i> Feb 2026 – Mar 2026</span>
+        </div>
+        <ul class="timeline-list">
+          <li>Supported implementation of DevOps practices including CI/CD pipeline setup, Infrastructure as Code, and deployment automation across cloud environments.</li>
+          <li>Provisioned and managed cloud infrastructure using Terraform, monitoring environments for performance, cost efficiency, and reliability across 2+ project workstreams.</li>
+          <li>Collaborated with a cross-functional Machine Learning team to design and document a scalable architecture on Google Cloud (Cloud Run, Cloud Storage, Cloud SQL) for ML experiment tracking.</li>
+          <li>Contributed to team documentation and workflow improvements, strengthening remote collaboration across a distributed team of engineers.</li>
+        </ul>
+      </div>
+
+      <!-- Role 4: Simplilearn -->
+      <div class="timeline-card">
+        <div class="timeline-header">
+          <div class="timeline-role-info">
+            <h3>DevOps on AWS Trainee</h3>
+            <span class="timeline-company"><i class="fab fa-aws"></i> Simplilearn – SkillUp</span>
+          </div>
+          <span class="timeline-date"><i class="fas fa-calendar-alt"></i> Aug 2025 – Oct 2025</span>
+        </div>
+        <ul class="timeline-list">
+          <li>Built foundational knowledge of DevOps principles, culture, and collaborative delivery practices applied to cloud-native AWS environments.</li>
+          <li>Implemented end-to-end CI/CD pipelines on AWS, reducing simulated release cycle time through automation using CodeCommit, CodeBuild, CodeDeploy, and CodePipeline.</li>
+          <li>Applied Infrastructure as Code (IaC) concepts using AWS CloudFormation and Terraform to provision reproducible, version-controlled cloud environments.</li>
+          <li>Completed structured training across 3 months, covering DevOps tooling, cloud automation, and deployment best practices on AWS.</li>
+        </ul>
+      </div>
+
+      <!-- Role 5: AmaliTech -->
+      <div class="timeline-card">
+        <div class="timeline-header">
+          <div class="timeline-role-info">
+            <h3>Cloud & DevOps Trainee</h3>
+            <span class="timeline-company"><i class="fas fa-server"></i> AmaliTech – Remote</span>
+          </div>
+          <span class="timeline-date"><i class="fas fa-calendar-alt"></i> Sep 2024 – Jan 2025</span>
+        </div>
+        <ul class="timeline-list">
+          <li>Completed the intensive AWS re/Start program, gaining hands-on experience in cloud infrastructure, software delivery, and DevOps practices over 5 months.</li>
+          <li>Built serverless applications using AWS Lambda and API Gateway, reducing infrastructure overhead by eliminating server provisioning for event-driven workloads.</li>
+          <li>Improved deployment consistency and delivery speed by building automated CI/CD pipelines using Jenkins and Docker across multiple project environments.</li>
+          <li>Deployed and managed containerised applications on AWS, supporting reliable and scalable service delivery across development and staging environments.</li>
+          <li>Collaborated with peers on scalable architecture design and produced documentation of best practices adopted by the team.</li>
+        </ul>
+      </div>
+
+      <!-- Role 6: UENR Graphic Designer -->
+      <div class="timeline-card">
+        <div class="timeline-header">
+          <div class="timeline-role-info">
+            <h3>IT Department – Graphic Designer</h3>
+            <span class="timeline-company"><i class="fas fa-university"></i> University of Energy and Natural Resources (UENR)</span>
+          </div>
+          <span class="timeline-date"><i class="fas fa-calendar-alt"></i> 2022 – Present</span>
+        </div>
+        <ul class="timeline-list">
+          <li>Supported the university's Information Technology department in delivering digital communication materials and institutional graphics using Adobe Photoshop.</li>
+          <li>Designed promotional materials, event visuals, and digital assets aligned with the department's visual identity and communication standards.</li>
+          <li>Collaborated with IT staff on technology-facing design tasks, bridging technical requirements and visual output for institutional use.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive DevOps Hub Section -->
+  <section id="devops-hub" class="content-section">
+    <div class="section-header">
+      <span class="section-tag">Interactive Showcase</span>
+      <h2 class="section-title">DevOps & Cloud Sandbox</h2>
+      <p class="section-subtitle">Interact with a live simulated CLI terminal or explore my end-to-end cloud deployment pipeline.</p>
+    </div>
+
+    <div class="devops-hub-grid">
+      <!-- Interactive Terminal / CLI Sandbox -->
+      <div class="terminal-card">
+        <div class="terminal-topbar">
+          <div class="terminal-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div class="terminal-title">
+            <i class="fas fa-terminal"></i> collins@cloud-station: ~
+          </div>
+          <div class="terminal-actions">
+            <button class="term-btn" id="term-clear-btn" title="Clear Terminal"><i class="fas fa-eraser"></i></button>
+          </div>
+        </div>
+        <div class="terminal-body" id="terminal-body">
+          <div class="terminal-welcome">
+            <p><span class="term-accent">Welcome to Collins's DevOps Terminal (v2.4.0)</span></p>
+            <p class="term-dim">Type <span class="term-highlight">'help'</span> to view available commands, or try <span class="term-highlight">'skills'</span>, <span class="term-highlight">'experience'</span>, <span class="term-highlight">'projects'</span>, <span class="term-highlight">'aws status'</span>, or <span class="term-highlight">'terraform apply'</span>.</p>
+          </div>
+          <div id="terminal-output" class="terminal-output"></div>
+          <div class="terminal-input-line">
+            <span class="term-prompt">collins@devops:~$</span>
+            <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" placeholder="type a command..." aria-label="Terminal command input" />
+          </div>
+        </div>
+      </div>
+
+      <!-- CI/CD & Cloud Pipeline Visualizer -->
+      <div class="pipeline-card">
+        <div class="pipeline-header">
+          <div class="pipeline-badge"><i class="fas fa-infinity"></i> CI/CD Pipeline Blueprint</div>
+          <h3>Automated Cloud Architecture Flow</h3>
+          <p>Click any stage below to inspect the infrastructure automation lifecycle:</p>
+        </div>
+
+        <div class="pipeline-flow" id="pipeline-flow">
+          <div class="pipeline-node active" data-stage="source">
+            <div class="node-icon"><i class="fab fa-git-alt"></i></div>
+            <div class="node-content">
+              <strong>1. Source Code</strong>
+              <small>Git & GitHub PRs</small>
+            </div>
+          </div>
+          <div class="pipeline-arrow"><i class="fas fa-chevron-right"></i></div>
+
+          <div class="pipeline-node" data-stage="ci">
+            <div class="node-icon"><i class="fas fa-sync-alt"></i></div>
+            <div class="node-content">
+              <strong>2. Automated CI</strong>
+              <small>Jenkins & GitHub Actions</small>
+            </div>
+          </div>
+          <div class="pipeline-arrow"><i class="fas fa-chevron-right"></i></div>
+
+          <div class="pipeline-node" data-stage="docker">
+            <div class="node-icon"><i class="fab fa-docker"></i></div>
+            <div class="node-content">
+              <strong>3. Containerize</strong>
+              <small>Docker Images & ECR</small>
+            </div>
+          </div>
+          <div class="pipeline-arrow"><i class="fas fa-chevron-right"></i></div>
+
+          <div class="pipeline-node" data-stage="iac">
+            <div class="node-icon"><i class="fas fa-cubes"></i></div>
+            <div class="node-content">
+              <strong>4. Provision IaC</strong>
+              <small>Terraform on AWS</small>
+            </div>
+          </div>
+          <div class="pipeline-arrow"><i class="fas fa-chevron-right"></i></div>
+
+          <div class="pipeline-node" data-stage="deploy">
+            <div class="node-icon"><i class="fab fa-aws"></i></div>
+            <div class="node-content">
+              <strong>5. AWS Deploy</strong>
+              <small>ECS / Lambda / S3</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="pipeline-detail-box" id="pipeline-detail-box">
+          <h4 id="pipe-detail-title"><i class="fab fa-git-alt"></i> Stage 1: Source Control & Branching Strategy</h4>
+          <p id="pipe-detail-desc">Developers commit code following GitFlow practices. Pre-commit hooks run linter and unit tests, initiating automated webhook triggers on pull requests.</p>
+          <div class="pipe-tech-tags" id="pipe-detail-tags">
+            <span class="pipe-tag">Git</span>
+            <span class="pipe-tag">GitHub</span>
+            <span class="pipe-tag">GitLab</span>
+            <span class="pipe-tag">Semantic Versioning</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects">
-    <h2 class="section-title">Featured Projects</h2>
+  <section id="projects" class="content-section">
+    <div class="section-header">
+      <span class="section-tag">Portfolio</span>
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-subtitle">Infrastructure as Code, microservice orchestration, AI study systems, and containerized deployments.</p>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="project-filter-bar">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="cloud">Cloud & DevOps</button>
+      <button class="filter-btn" data-filter="fullstack">Frontend & Web</button>
+      <button class="filter-btn" data-filter="ai">AI & Machine Learning</button>
+    </div>
+
     <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-image">
-          <i class="fas fa-brain"></i>
+      <!-- Project 1: Kubernetes-Based Microservices Deployment -->
+      <div class="project-card" data-category="cloud">
+        <div class="project-header-banner">
+          <div class="project-type-badge"><i class="fas fa-ship"></i> Kubernetes & Telemetry</div>
+          <div class="project-metric-badge"><i class="fas fa-chart-line"></i> Prometheus & Grafana</div>
         </div>
         <div class="project-content">
-          <h3 class="project-title">Cognify</h3>
+          <h3 class="project-title">Kubernetes-Based Microservices Deployment</h3>
           <p class="project-description">
-            An intelligent full-stack app that converts uploaded documents,
-            webpage links, and video URLs into interactive study modes using AI. It
-            generates structured question-and-answer cards to accelerate
-            studying and improve knowledge retention.
+            Deployed a full-scale microservice application on Kubernetes, implementing real-time observability using Prometheus and Grafana dashboards that monitor system performance across all running pods and services.
+          </p>
+          <div class="tech-stack">
+            <span class="tech-tag">Kubernetes</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">Prometheus</span>
+            <span class="tech-tag">Grafana</span>
+            <span class="tech-tag">AWS EKS</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Collins-Munufie" target="_blank" class="project-link github-link">
+              <i class="fab fa-github"></i> GitHub Profile
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: Automated Infrastructure Provisioning with Terraform -->
+      <div class="project-card" data-category="cloud">
+        <div class="project-header-banner">
+          <div class="project-type-badge"><i class="fab fa-aws"></i> Infrastructure as Code</div>
+          <div class="project-metric-badge"><i class="fas fa-clock"></i> Deploy &lt; 10 Mins</div>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Automated Infrastructure Provisioning with Terraform</h3>
+          <p class="project-description">
+            Built a fully automated IaC solution using Terraform to provision AWS resources (VPC, compute, security groups, storage) consistently across environments, eliminating manual setup and enabling reproducible deployments.
+          </p>
+          <div class="tech-stack">
+            <span class="tech-tag">Terraform</span>
+            <span class="tech-tag">AWS (VPC, EC2, S3)</span>
+            <span class="tech-tag">IaC</span>
+            <span class="tech-tag">CloudFormation</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Collins-Munufie/ecommerce-aws-terraform-project" target="_blank" class="project-link github-link">
+              <i class="fab fa-github"></i> GitHub Repo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: React App Deployment on AWS EC2 -->
+      <div class="project-card" data-category="cloud fullstack">
+        <div class="project-header-banner">
+          <div class="project-type-badge"><i class="fab fa-aws"></i> AWS Cloud Hosting</div>
+          <div class="project-metric-badge"><i class="fas fa-shield-alt"></i> IAM & Security Groups</div>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">React App Deployment on AWS EC2</h3>
+          <p class="project-description">
+            Deployed and managed a production-ready React web application on AWS EC2, configuring security groups, IAM roles, NGINX reverse proxy, and instance lifecycle management for a reliable hosting environment.
+          </p>
+          <div class="tech-stack">
+            <span class="tech-tag">AWS EC2</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">NGINX</span>
+            <span class="tech-tag">Linux</span>
+            <span class="tech-tag">IAM</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Collins-Munufie" target="_blank" class="project-link github-link">
+              <i class="fab fa-github"></i> GitHub Profile
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4: Cognify — AI-Powered Study Platform -->
+      <div class="project-card" data-category="fullstack ai">
+        <div class="project-header-banner">
+          <div class="project-type-badge"><i class="fas fa-brain"></i> AI & Web App</div>
+          <div class="project-metric-badge"><i class="fas fa-bolt"></i> Interactive Study AI</div>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Cognify — AI-Powered Study Platform</h3>
+          <p class="project-description">
+            Developed an AI-powered study tool using React, JavaScript, and Python that transforms PDFs, Word documents, PowerPoint files, websites, and YouTube links into interactive study materials, supporting multiple input formats for diverse learning needs.
           </p>
           <div class="tech-stack">
             <span class="tech-tag">React</span>
             <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">AI</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">OpenAI API</span>
             <span class="tech-tag">Node.js</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/Collins-Munufie/Cognify" target="_blank" class="project-link">
-              <i class="fab fa-github"></i> GitHub
+            <a href="https://github.com/Collins-Munufie/Cognify" target="_blank" class="project-link github-link">
+              <i class="fab fa-github"></i> GitHub Repo
             </a>
-            <a href="https://cognify-rosy.vercel.app/" target="_blank" class="project-link">
+            <a href="https://cognify-rosy.vercel.app/" target="_blank" class="project-link live-link">
               <i class="fas fa-external-link-alt"></i> Live Demo
             </a>
           </div>
         </div>
       </div>
 
-      <div class="project-card">
-        <div class="project-image">
-          <i class="fas fa-hospital"></i>
+      <!-- Project 5: Dockerized Three-Tier Web Application -->
+      <div class="project-card" data-category="cloud">
+        <div class="project-header-banner">
+          <div class="project-type-badge"><i class="fab fa-docker"></i> Container Architecture</div>
+          <div class="project-metric-badge"><i class="fas fa-cubes"></i> Multi-Service Stack</div>
         </div>
         <div class="project-content">
-          <h3 class="project-title">Telemedicine Platform</h3>
+          <h3 class="project-title">Dockerized Three-Tier Web Application</h3>
           <p class="project-description">
-            Frontend developer on a production telemedicine platform for 404
-            Paradox Labs, building responsive React components that support
-            remote consultations and patient management workflows.
+            Developed and containerized a three-tier web application using Docker and Docker Compose, separating the frontend, backend, and database into independent, isolated microservices with persistent volume networks.
           </p>
+          <div class="tech-stack">
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">Docker Compose</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Database</span>
+            <span class="tech-tag">Microservices</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Collins-Munufie" target="_blank" class="project-link github-link">
+              <i class="fab fa-github"></i> GitHub Profile
+            </a>
+          </div>
+        </div>
+      </div>
 
+      <!-- Project 6: Telemedicine Platform -->
+      <div class="project-card" data-category="fullstack">
+        <div class="project-header-banner">
+          <div class="project-type-badge"><i class="fas fa-hospital-user"></i> 404 Paradox Labs</div>
+          <div class="project-metric-badge"><i class="fas fa-users"></i> Patient Booking UI</div>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Telemedicine Consultation Platform</h3>
+          <p class="project-description">
+            Engineered responsive React interface components for 404 Paradox Labs' telehealth platform, facilitating doctor-patient appointment booking, real-time consultation portals, and patient profile management workflows.
+          </p>
           <div class="tech-stack">
             <span class="tech-tag">React</span>
             <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">HTML</span>
-            <span class="tech-tag">CSS</span>
-          </div>
-          <div>
-            <a href="https://github.com/404paradoxlabs/Telemedicine_system" target="_blank" class="project-link">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-image">
-          <i class="fas fa-chart-line"></i>
-        </div>
-        <div class="project-content">
-          <h3 class="project-title">Learning Difficulty Classifier</h3>
-          <p class="project-description">
-            An XGBoost model that predicts student learning difficulties with
-            91.3% accuracy, paired with a content-based recommender system.
-            Class imbalance was handled with SMOTE and model decisions were
-            validated using SHAP explainability.
-          </p>
-          <div class="tech-stack">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">XGBoost</span>
-            <span class="tech-tag">SHAP</span>
-            <span class="tech-tag">SMOTE</span>
+            <span class="tech-tag">HTML5</span>
+            <span class="tech-tag">CSS3</span>
+            <span class="tech-tag">REST APIs</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/Collins-Munufie/learning-ai" target="_blank" class="project-link">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="https://learnai-assistant.vercel.app/" target="_blank" class="project-link">
-              <i class="fas fa-external-link-alt"></i> Live Demo
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-image">
-          <i class="fas fa-terminal"></i>
-        </div>
-        <div class="project-content">
-          <h3 class="project-title">Ubuntu DevOps Bootstrap Automation</h3>
-          <p class="project-description">
-            A single Bash script that installs essential DevOps tools on fresh
-            Ubuntu servers, cloud VMs, or local Linux virtual machines. The
-            automation streamlines initial Linux setup for infrastructure and
-            developer environments.
-          </p>
-          <div class="tech-stack">
-            <span class="tech-tag">Bash</span>
-            <span class="tech-tag">Ubuntu</span>
-            <span class="tech-tag">DevOps</span>
-            <span class="tech-tag">Automation</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Collins-Munufie/Automate-Package-Installation" target="_blank"
-              class="project-link">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-image">
-          <i class="fas fa-shopping-cart"></i>
-        </div>
-        <div class="project-content">
-          <h3 class="project-title">AvinashMarket Ecommerce AWS Terraform</h3>
-          <p class="project-description">
-            A responsive e-commerce website with product pages, cart and
-            checkout flows, deployed to AWS using Terraform. The project
-            combines frontend shopping experience with infrastructure as code.
-          </p>
-          <div class="tech-stack">
-            <span class="tech-tag">HTML</span>
-            <span class="tech-tag">CSS</span>
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">Terraform</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Collins-Munufie/ecommerce-aws-terraform-project" target="_blank"
-              class="project-link">
-              <i class="fab fa-github"></i> GitHub
+            <a href="https://github.com/404paradoxlabs/Telemedicine_system" target="_blank" class="project-link github-link">
+              <i class="fab fa-github"></i> GitHub Repo
             </a>
           </div>
         </div>
@@ -275,69 +665,81 @@
   </section>
 
   <!-- GitHub Activity Section -->
-  <section id="github-activity">
-    <h2 class="section-title">GitHub Activity</h2>
+  <section id="github-activity" class="content-section">
+    <div class="section-header">
+      <span class="section-tag">Open Source</span>
+      <h2 class="section-title">GitHub Activity & Contributions</h2>
+      <p class="section-subtitle">Real-time statistics, language distributions, and recent repositories from @Collins-Munufie.</p>
+    </div>
 
     <div class="github-container">
-      <div class="github-stats">
+      <div class="github-stats-grid">
         <div class="stat-card">
-          <i class="fas fa-code-branch stat-icon"></i>
-          <h3 class="stat-number" id="repos-count">0</h3>
-          <p class="stat-label">Total Repos (Public)</p>
+          <div class="stat-icon-wrapper"><i class="fas fa-code-branch stat-icon"></i></div>
+          <h3 class="stat-number" id="repos-count">24</h3>
+          <p class="stat-label">Public Repositories</p>
         </div>
         <div class="stat-card">
-          <i class="fas fa-star stat-icon"></i>
-          <h3 class="stat-number" id="stars-count">0</h3>
-          <p class="stat-label">Total Stars</p>
+          <div class="stat-icon-wrapper"><i class="fas fa-star stat-icon"></i></div>
+          <h3 class="stat-number" id="stars-count">12</h3>
+          <p class="stat-label">Total Stars Earned</p>
         </div>
         <div class="stat-card">
-          <i class="fas fa-code-commit stat-icon"></i>
-          <h3 class="stat-number" id="commits-count">0</h3>
+          <div class="stat-icon-wrapper"><i class="fas fa-code-commit stat-icon"></i></div>
+          <h3 class="stat-number" id="commits-count">180+</h3>
           <p class="stat-label">Contributions</p>
         </div>
         <div class="stat-card">
-          <i class="fas fa-users stat-icon"></i>
-          <h3 class="stat-number" id="followers-count">0</h3>
-          <p class="stat-label">Followers</p>
+          <div class="stat-icon-wrapper"><i class="fas fa-users stat-icon"></i></div>
+          <h3 class="stat-number" id="followers-count">15</h3>
+          <p class="stat-label">GitHub Followers</p>
         </div>
       </div>
 
-      <!-- Contribution Graph -->
-      <div class="contribution-graph-container">
-        <h3 class="graph-title">
-          <i class="fas fa-chart-line"></i> Contribution Activity (Last 30
-          Days)
-        </h3>
-        <canvas id="contribution-chart"></canvas>
-      </div>
-
-      <!-- Language Distribution -->
+      <!-- Charts Grid -->
       <div class="charts-grid">
         <div class="chart-container">
-          <h3 class="graph-title">
-            <i class="fas fa-code"></i> Languages Used
-          </h3>
-          <canvas id="languages-chart"></canvas>
+          <div class="chart-header">
+            <h3 class="graph-title">
+              <i class="fas fa-chart-line"></i> Activity Velocity (30 Days)
+            </h3>
+            <span class="chart-badge">Live Trends</span>
+          </div>
+          <div class="chart-canvas-box">
+            <canvas id="contribution-chart"></canvas>
+          </div>
         </div>
 
         <div class="chart-container">
-          <h3 class="graph-title">
-            <i class="fas fa-chart-pie"></i> Repository Stats
-          </h3>
-          <canvas id="repo-stats-chart"></canvas>
+          <div class="chart-header">
+            <h3 class="graph-title">
+              <i class="fas fa-code"></i> Primary Languages
+            </h3>
+            <span class="chart-badge">Top Tech</span>
+          </div>
+          <div class="chart-canvas-box">
+            <canvas id="languages-chart"></canvas>
+          </div>
         </div>
       </div>
 
-      <div class="github-profile">
-        <div class="recent-repos">
-          <h4>Recent Repositories</h4>
-          <div class="repos-grid"></div>
+      <!-- Live Repos & Activity Feed -->
+      <div class="github-profile-details">
+        <div class="recent-repos-box">
+          <div class="repos-box-header">
+            <h4><i class="fas fa-folder-open"></i> Pinned & Recent Repositories</h4>
+            <a href="https://github.com/Collins-Munufie?tab=repositories" target="_blank" class="view-all-link">View All <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="repos-grid" id="repos-grid"></div>
         </div>
 
         <div class="activity-feed-container">
-          <h4><span class="live-dot"></span> Live Activity Feed</h4>
+          <div class="activity-header">
+            <h4><span class="live-dot"></span> Live Activity Feed</h4>
+            <button id="refresh-github-btn" class="refresh-btn" title="Refresh GitHub Data"><i class="fas fa-sync-alt"></i></button>
+          </div>
           <div id="activity-feed" class="activity-feed">
-            <p class="loading-text">Fetching latest activities...</p>
+            <p class="loading-text"><i class="fas fa-spinner fa-spin"></i> Fetching latest GitHub activities...</p>
           </div>
         </div>
       </div>
@@ -345,120 +747,186 @@
   </section>
 
   <!-- Certifications Section -->
-  <section id="certifications">
-    <h2 class="section-title">Certifications</h2>
+  <section id="certifications" class="content-section">
+    <div class="section-header">
+      <span class="section-tag">Credentials</span>
+      <h2 class="section-title">Verified Certifications</h2>
+      <p class="section-subtitle">Industry-recognized credentials in Kubernetes cloud native essentials and AWS DevOps methodologies.</p>
+    </div>
+
     <div class="cert-grid">
+      <!-- Cert 1: Linux Foundation -->
       <div class="cert-card">
-        <div class="cert-icon">
-          <i class="fas fa-certificate"></i>
+        <div class="cert-card-top">
+          <div class="cert-icon linux-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <span class="cert-status-badge"><i class="fas fa-check"></i> Verified</span>
         </div>
-        <h3 class="cert-title">Kubernetes and Cloud Native Essentials</h3>
-        <p class="cert-issuer">The Linux Foundation</p>
-        <button class="cert-view-button" type="button" data-cert-image="Linux-foundation.png"
-          data-cert-title="Kubernetes and Cloud Native Essentials" data-cert-issuer="The Linux Foundation">
-          View
-        </button>
+        <h3 class="cert-title">Kubernetes and Cloud Native Essentials (LFS250)</h3>
+        <p class="cert-issuer"><i class="fas fa-building"></i> The Linux Foundation</p>
+        <p class="cert-desc">Demonstrates core competencies in container architecture, Kubernetes deployments, services, networking, and cloud-native architecture principles.</p>
+        <div class="cert-actions">
+          <button class="cert-view-button" type="button" data-cert-image="Linux-foundation.png"
+            data-cert-title="Kubernetes and Cloud Native Essentials (LFS250)" data-cert-issuer="The Linux Foundation"
+            data-cert-desc="Issued by The Linux Foundation for mastering Kubernetes cluster orchestration and cloud native principles.">
+            <i class="fas fa-eye"></i> Preview Badge
+          </button>
+        </div>
       </div>
+
+      <!-- Cert 2: AWS Certified Cloud Practitioner -->
       <div class="cert-card">
-        <div class="cert-icon">
-          <i class="fab fa-aws"></i>
+        <div class="cert-card-top">
+          <div class="cert-icon aws-icon">
+            <i class="fab fa-aws"></i>
+          </div>
+          <span class="cert-status-badge"><i class="fas fa-check"></i> Verified</span>
         </div>
         <h3 class="cert-title">AWS Certified Cloud Practitioner</h3>
-        <p class="cert-issuer">Amazon Web Services</p>
-        <button class="cert-view-button" type="button" data-cert-image="aws-certified-cloud-practitioner.png"
-          data-cert-title="AWS Certified Cloud Practitioner" data-cert-issuer="Amazon Web Services">
-          View
-        </button>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon">
-          <i class="fas fa-cloud"></i>
+        <p class="cert-issuer"><i class="fas fa-building"></i> Amazon Web Services (AWS)</p>
+        <p class="cert-desc">Validates comprehensive overall understanding of the AWS Cloud platform, core infrastructure services (Compute, Storage, Database, Networking), security, and cost management.</p>
+        <div class="cert-actions">
+          <button class="cert-view-button" type="button" data-cert-image="aws-certified-cloud-practitioner.png"
+            data-cert-title="AWS Certified Cloud Practitioner" data-cert-issuer="Amazon Web Services"
+            data-cert-desc="Official certification by Amazon Web Services validating cloud architectural knowledge and security compliance.">
+            <i class="fas fa-eye"></i> Preview Badge
+          </button>
         </div>
-        <h3 class="cert-title">Fundamentals of DevOps on AWS</h3>
-        <p class="cert-issuer">Simplilearn</p>
-        <button class="cert-view-button" type="button" data-cert-image="Simplilearn.png"
-          data-cert-title="Fundamentals of DevOps on AWS" data-cert-issuer="Simplilearn">
-          View
-        </button>
+      </div>
+
+      <!-- Cert 3: Simplilearn DevOps on AWS -->
+      <div class="cert-card">
+        <div class="cert-card-top">
+          <div class="cert-icon simplilearn-icon">
+            <i class="fas fa-cloud"></i>
+          </div>
+          <span class="cert-status-badge"><i class="fas fa-check"></i> Verified</span>
+        </div>
+        <h3 class="cert-title">DevOps on AWS</h3>
+        <p class="cert-issuer"><i class="fas fa-building"></i> Simplilearn – SkillUp</p>
+        <p class="cert-desc">Practical mastery in AWS CodePipeline, CodeBuild, CodeDeploy, automated CI/CD lifecycle pipelines, and Infrastructure as Code concepts.</p>
+        <div class="cert-actions">
+          <button class="cert-view-button" type="button" data-cert-image="Simplilearn.png"
+            data-cert-title="DevOps on AWS" data-cert-issuer="Simplilearn"
+            data-cert-desc="Specialized certificate in AWS DevOps tooling, automation pipelines, and infrastructure governance.">
+            <i class="fas fa-eye"></i> Preview Badge
+          </button>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Certificate Modal -->
-  <div id="cert-modal" class="modal cert-modal" aria-hidden="true">
+  <div id="cert-modal" class="modal cert-modal" aria-hidden="true" role="dialog">
     <div class="cert-modal-content">
       <button class="modal-close" type="button" aria-label="Close certificate preview">
-        ×
+        &times;
       </button>
-      <h3 id="cert-modal-title"></h3>
-      <p id="cert-modal-issuer"></p>
-      <img id="cert-modal-image" src="" alt="Certificate preview" />
-      <p class="modal-fallback">Certificate preview is not available.</p>
+      <div class="cert-modal-header">
+        <h3 id="cert-modal-title">Certificate Preview</h3>
+        <p id="cert-modal-issuer" class="cert-modal-sub"></p>
+      </div>
+      <div class="cert-image-frame">
+        <img id="cert-modal-image" src="" alt="Certificate preview" />
+        <p class="modal-fallback">Certificate preview is loading...</p>
+      </div>
+      <p id="cert-modal-desc" class="cert-modal-explanation"></p>
     </div>
   </div>
 
   <!-- Contact Section -->
-  <section id="contact">
-    <h2 class="section-title">Get In Touch</h2>
-    <div class="contact-container">
-      <form class="contact-form" action="https://formsubmit.co/collinsmunufie2018@gmail.com" method="POST"
-        id="contact-form">
-        <!-- Use FormSubmit.co to send messages directly to Gmail -->
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_subject" value="New Portfolio Message from Website" />
-        <input type="text" name="_honey" style="display: none" />
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required />
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="_replyto" required />
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
-        <button type="submit" class="submit-btn">Send Message</button>
-      </form>
+  <section id="contact" class="content-section">
+    <div class="section-header">
+      <span class="section-tag">Get In Touch</span>
+      <h2 class="section-title">Let's Build Something Together</h2>
+      <p class="section-subtitle">Open for DevOps engineering roles, cloud infrastructure projects, and technical collaborations.</p>
+    </div>
 
+    <div class="contact-container">
+      <!-- Contact Form -->
+      <div class="contact-form-wrapper">
+        <form class="contact-form" action="https://formsubmit.co/collinsmunufie2018@gmail.com" method="POST" id="contact-form">
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_subject" value="New Portfolio Message from Website" />
+          <input type="text" name="_honey" style="display: none" />
+          
+          <div class="form-group">
+            <label for="name"><i class="fas fa-user"></i> Your Name</label>
+            <input type="text" id="name" name="name" placeholder="e.g. Alex Johnson" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+            <input type="email" id="email" name="_replyto" placeholder="alex@company.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message"><i class="fas fa-comment-dots"></i> Your Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, team, or opportunity..." required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn" id="contact-submit-btn">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+
+      <!-- Contact Info Cards -->
       <div class="contact-info">
         <div class="contact-item">
-          <i class="fas fa-envelope contact-icon"></i>
-          <div>
+          <div class="contact-icon-box">
+            <i class="fas fa-envelope contact-icon"></i>
+          </div>
+          <div class="contact-item-text">
             <h3>Email</h3>
             <p>collinsmunufie2018@gmail.com</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <i class="fas fa-map-marker-alt contact-icon"></i>
-          <div>
-            <h3>Location</h3>
-            <p>Sunyani, Ghana</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <i class="fab fa-whatsapp contact-icon"></i>
-          <div>
-            <h3>WhatsApp</h3>
-            <p>+233 559 689 849</p>
-            <a href="https://wa.me/233559689849" target="_blank" class="whatsapp-btn">Chat with me</a>
+            <button class="quick-copy-link" data-copy="collinsmunufie2018@gmail.com">
+              <i class="fas fa-copy"></i> Copy Address
+            </button>
           </div>
         </div>
 
-        <div class="social-links">
-          <a href="https://github.com/Collins-Munufie" class="social-link" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/collins-munufie/" class="social-link" target="_blank">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="mailto:collinsmunufie2018@gmail.com" class="social-link">
-            <i class="fas fa-envelope"></i>
-          </a>
-          <a href="https://x.com/CMunufie8438" class="social-link" target="_blank">
-            <i class="fab fa-twitter"></i>
-          </a>
+        <div class="contact-item">
+          <div class="contact-icon-box">
+            <i class="fab fa-whatsapp contact-icon"></i>
+          </div>
+          <div class="contact-item-text">
+            <h3>WhatsApp</h3>
+            <p>+233 559 689 849</p>
+            <a href="https://wa.me/233559689849" target="_blank" class="whatsapp-btn">
+              <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon-box">
+            <i class="fas fa-map-marker-alt contact-icon"></i>
+          </div>
+          <div class="contact-item-text">
+            <h3>Location</h3>
+            <p>Sunyani, Ghana (Open to Global Remote Work)</p>
+          </div>
+        </div>
+
+        <!-- Social Network Bar -->
+        <div class="social-networks-box">
+          <h4>Connect on Social Platforms</h4>
+          <div class="social-links">
+            <a href="https://github.com/Collins-Munufie" class="social-link" target="_blank" aria-label="GitHub Profile">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/collins-munufie/" class="social-link" target="_blank" aria-label="LinkedIn Profile">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:collinsmunufie2018@gmail.com" class="social-link" aria-label="Direct Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://x.com/CMunufie8438" class="social-link" target="_blank" aria-label="X Twitter Profile">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -467,30 +935,45 @@
   <!-- Footer -->
   <footer>
     <div class="footer-inner">
-      <p>
-        &copy; Information Technology Professional | Software Development | Cloud Devops Engineering. All rights
-        reserved.
-      </p>
-      <!-- <p>Built with modern web technologies and deployed with CI/CD</p> -->
+      <div class="footer-brand">
+        <a href="#home" class="footer-logo">Munufie<span>.dev</span></a>
+        <p>Designing, automating, and deploying resilient cloud systems & modern software.</p>
+      </div>
+
+      <div class="footer-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#devops-hub">DevOps Hub</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+        <a href="resume.html" target="_blank">Resume / CV</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> Munufie Collins Anane. All rights reserved.</p>
+        <a href="#home" class="back-to-top" title="Back to top">
+          <i class="fas fa-arrow-up"></i>
+        </a>
+      </div>
     </div>
   </footer>
 
   <!-- Success Modal -->
-  <div id="success-modal" class="modal">
+  <div id="success-modal" class="modal" role="dialog">
     <div class="modal-content-success">
       <div class="success-icon">
         <i class="fas fa-check-circle"></i>
       </div>
-      <h2>Message Sent!</h2>
+      <h2>Message Sent Successfully!</h2>
       <p>
-        Thank you for reaching out. I'll get back to you shortly at your
-        email.
+        Thank you for reaching out. I have received your message and will respond promptly to your email.
       </p>
-      <button class="cta-button close-modal-btn">Close</button>
+      <button class="cta-button primary close-modal-btn">Close Window</button>
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
 </body>
 
