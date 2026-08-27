@@ -246,11 +246,12 @@ Process:           Technical Documentation, Workflow Automation, Linux & Windows
 5. Cloud & DevOps Trainee             | AmaliTech         | Sep 2024 - Jan 2025
 6. IT Department - Graphic Designer   | UENR              | 2022 - Present`,
 
-    projects: () => `1. Kubernetes-Based Microservices Deployment   - K8s cluster with Prometheus & Grafana
-2. React App Deployment on AWS EC2             - Production React hosting with IAM & Security Groups
-3. Automated Infrastructure Provisioning       - Full IaC Terraform AWS deployment (< 10 mins)
-4. Cognify - AI-Powered Study Platform         - Multi-format document study app (React, OpenAI)
-5. Dockerized Three-Tier Web Application       - Multi-container architecture with Docker Compose`,
+    projects: () => `1. School Management System (SMS)             - Ghanaian Basic Ed (KG, Primary, JHS) with WAEC Grading & MoMo
+2. Kubernetes-Based Microservices Deployment   - K8s cluster with Prometheus & Grafana
+3. React App Deployment on AWS EC2             - Production React hosting with IAM & Security Groups
+4. Automated Infrastructure Provisioning       - Full IaC Terraform AWS deployment (< 10 mins)
+5. Cognify - AI-Powered Study Platform         - Multi-format document study app (React, OpenAI)
+6. Dockerized Three-Tier Web Application       - Multi-container architecture with Docker Compose`,
 
     education: () => `University of Energy and Natural Resources (UENR)
 Degree: Bachelor of Science in Information Technology
