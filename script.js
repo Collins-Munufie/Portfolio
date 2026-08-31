@@ -21,53 +21,61 @@ const FALLBACK_GITHUB_DATA = {
   contributionsEstimate: "180+",
   repos: [
     {
-      name: "Cognify",
-      html_url: "https://github.com/Collins-Munufie/Cognify",
-      description: "AI-powered study tool converting docs, PDFs, and links into interactive flashcards.",
-      language: "JavaScript",
+      name: "KHOPHI-Academy-school",
+      html_url: "https://github.com/Collins-Munufie/KHOPHI-Academy-school",
+      description: "Modern school web platform & campus management system for dual Cambridge & National curricula.",
+      language: "TypeScript",
       stargazers_count: 5,
-      forks_count: 2,
+      forks_count: 1,
     },
     {
-      name: "ecommerce-aws-terraform-project",
-      html_url: "https://github.com/Collins-Munufie/ecommerce-aws-terraform-project",
-      description: "Automated AWS Infrastructure provisioning with Terraform (VPC, compute, security).",
-      language: "HCL",
-      stargazers_count: 4,
+      name: "SMS",
+      html_url: "https://github.com/Collins-Munufie/SMS",
+      description: "School Management System for Ghanaian basic education (KG, Primary, JHS) with WAEC grading & MoMo payments.",
+      language: "TypeScript",
+      stargazers_count: 5,
       forks_count: 1,
+    },
+    {
+      name: "Cognify",
+      html_url: "https://github.com/Collins-Munufie/Cognify",
+      description: "AI-powered study platform converting documents, links, and videos into interactive Q&A flashcards.",
+      language: "JavaScript",
+      stargazers_count: 6,
+      forks_count: 2,
     },
     {
       name: "learning-ai",
       html_url: "https://github.com/Collins-Munufie/learning-ai",
-      description: "XGBoost learning difficulty classifier with SMOTE and SHAP explainability.",
-      language: "Python",
-      stargazers_count: 3,
+      description: "AI-powered learning difficulty classification & recommendations across 5 cognitive domains.",
+      language: "TypeScript",
+      stargazers_count: 4,
       forks_count: 1,
     },
     {
-      name: "Automate-Package-Installation",
-      html_url: "https://github.com/Collins-Munufie/Automate-Package-Installation",
-      description: "Automated bash provisioning suite for Ubuntu cloud servers and DevOps tooling.",
-      language: "Shell",
-      stargazers_count: 2,
+      name: "Automated_Application_Deployment",
+      html_url: "https://github.com/Collins-Munufie/Automated_Application_Deployment",
+      description: "Automated AWS Infrastructure provisioning with Terraform (VPC, compute, security groups).",
+      language: "HCL",
+      stargazers_count: 3,
       forks_count: 1,
     },
   ],
   recentActivity: [
     {
       type: "PushEvent",
-      repo: "Collins-Munufie/Cognify",
+      repo: "Collins-Munufie/SMS",
       time: "Recent commit to main",
     },
     {
-      type: "CreateEvent",
-      repo: "Collins-Munufie/ecommerce-aws-terraform-project",
-      time: "Updated Terraform modules",
+      type: "PushEvent",
+      repo: "Collins-Munufie/Cognify",
+      time: "Updated AI flashcard generator",
     },
     {
       type: "PushEvent",
       repo: "Collins-Munufie/learning-ai",
-      time: "Enhanced model evaluation metrics",
+      time: "Enhanced cognitive evaluation models",
     },
     {
       type: "WatchEvent",
@@ -246,12 +254,13 @@ Process:           Technical Documentation, Workflow Automation, Linux & Windows
 5. Cloud & DevOps Trainee             | AmaliTech         | Sep 2024 - Jan 2025
 6. IT Department - Graphic Designer   | UENR              | 2022 - Present`,
 
-    projects: () => `1. School Management System (SMS)             - Ghanaian Basic Ed (KG, Primary, JHS) with WAEC Grading & MoMo
-2. Kubernetes-Based Microservices Deployment   - K8s cluster with Prometheus & Grafana
-3. React App Deployment on AWS EC2             - Production React hosting with IAM & Security Groups
-4. Automated Infrastructure Provisioning       - Full IaC Terraform AWS deployment (< 10 mins)
-5. Cognify - AI-Powered Study Platform         - Multi-format document study app (React, OpenAI)
-6. Dockerized Three-Tier Web Application       - Multi-container architecture with Docker Compose`,
+    projects: () => `1. KHOPHI Academy School Platform         - Modern School Portal for Cambridge & National Curricula
+2. School Management System (SMS)             - Ghanaian Basic Ed (KG, Primary, JHS) with WAEC Grading & MoMo
+3. Kubernetes-Based Microservices Deployment   - K8s cluster with Prometheus & Grafana
+4. React App Deployment on AWS EC2             - Production React hosting with IAM & Security Groups
+5. Automated Infrastructure Provisioning       - Full IaC Terraform AWS deployment (< 10 mins)
+6. Cognify - AI-Powered Study Platform         - Multi-format document study app (React, OpenAI)
+7. Dockerized Three-Tier Web Application       - Multi-container architecture with Docker Compose`,
 
     education: () => `University of Energy and Natural Resources (UENR)
 Degree: Bachelor of Science in Information Technology
