@@ -21,6 +21,14 @@ const FALLBACK_GITHUB_DATA = {
   contributionsEstimate: "180+",
   repos: [
     {
+      name: "blog-platform",
+      html_url: "https://github.com/Collins-Munufie/blog-platform",
+      description: "Full-stack editorial & publication platform with reader experience, Creator Studio, and Admin suite.",
+      language: "TypeScript",
+      stargazers_count: 5,
+      forks_count: 1,
+    },
+    {
       name: "KHOPHI-Academy-school",
       html_url: "https://github.com/Collins-Munufie/KHOPHI-Academy-school",
       description: "Modern school web platform & campus management system for dual Cambridge & National curricula.",
@@ -254,13 +262,14 @@ Process:           Technical Documentation, Workflow Automation, Linux & Windows
 5. Cloud & DevOps Trainee             | AmaliTech         | Sep 2024 - Jan 2025
 6. IT Department - Graphic Designer   | UENR              | 2022 - Present`,
 
-    projects: () => `1. KHOPHI Academy School Platform         - Modern School Portal for Cambridge & National Curricula
-2. School Management System (SMS)             - Ghanaian Basic Ed (KG, Primary, JHS) with WAEC Grading & MoMo
-3. Kubernetes-Based Microservices Deployment   - K8s cluster with Prometheus & Grafana
-4. React App Deployment on AWS EC2             - Production React hosting with IAM & Security Groups
-5. Automated Infrastructure Provisioning       - Full IaC Terraform AWS deployment (< 10 mins)
-6. Cognify - AI-Powered Study Platform         - Multi-format document study app (React, OpenAI)
-7. Dockerized Three-Tier Web Application       - Multi-container architecture with Docker Compose`,
+    projects: () => `1. Editorial & Publication Platform          - Full-Stack Next.js Publishing Suite with Creator Studio
+2. KHOPHI Academy School Platform         - Modern School Portal for Cambridge & National Curricula
+3. School Management System (SMS)             - Ghanaian Basic Ed (KG, Primary, JHS) with WAEC Grading & MoMo
+4. Kubernetes-Based Microservices Deployment   - K8s cluster with Prometheus & Grafana
+5. React App Deployment on AWS EC2             - Production React hosting with IAM & Security Groups
+6. Automated Infrastructure Provisioning       - Full IaC Terraform AWS deployment (< 10 mins)
+7. Cognify - AI-Powered Study Platform         - Multi-format document study app (React, OpenAI)
+8. Dockerized Three-Tier Web Application       - Multi-container architecture with Docker Compose`,
 
     education: () => `University of Energy and Natural Resources (UENR)
 Degree: Bachelor of Science in Information Technology
