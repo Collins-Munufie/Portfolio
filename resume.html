@@ -1,623 +1,687 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume | Munufie Collins Anane - DevOps Engineer</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --primary: #ffcb01;
-        --primary-glow: rgba(255, 203, 1, 0.35);
-        --secondary: #00388f;
-        --secondary-light: rgba(0, 56, 143, 0.08);
-        --text-main: #0f172a;
-        --text-secondary: #334155;
-        --text-light: #475569;
-        --text-muted: #64748b;
-        --border: #e2e8f0;
-        --bg-page: #f7f8fb;
-        --bg-tag: #f1f5f9;
-        --radius: 8px;
-      }
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume | Munufie Collins Anane - DevOps Engineer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #ffcb01;
+      --primary-glow: rgba(255, 203, 1, 0.35);
+      --secondary: #00388f;
+      --secondary-light: rgba(0, 56, 143, 0.08);
+      --text-main: #0f172a;
+      --text-secondary: #334155;
+      --text-light: #475569;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --bg-page: #f7f8fb;
+      --bg-tag: #f1f5f9;
+      --radius: 8px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.55;
+      color: var(--text-main);
+      background: var(--bg-page);
+      padding: 35px 20px;
+    }
+
+    .resume-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 50px 55px;
+      box-shadow: 0 10px 30px rgba(0, 56, 143, 0.07);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      border-bottom: 3px solid var(--secondary);
+      padding-bottom: 22px;
+      margin-bottom: 26px;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: var(--primary);
+    }
+
+    h1 {
+      font-family: "Outfit", sans-serif;
+      font-size: 2.35rem;
+      font-weight: 800;
+      color: var(--secondary);
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      font-family: "Outfit", sans-serif;
+      font-size: 1.2rem;
+      color: var(--text-main);
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .contact-info a {
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    .contact-info a:hover {
+      color: #002255;
+      text-decoration: underline;
+    }
+
+    .contact-info span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .contact-info span i {
+      color: var(--secondary);
+    }
+
+    .divider-dot {
+      color: var(--border);
+      font-weight: bold;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-family: "Outfit", sans-serif;
+      font-size: 1.05rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1.5px solid var(--border);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+      color: var(--secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h2 i {
+      font-size: 0.95rem;
+      color: var(--secondary);
+    }
+
+    /* Profile Summary */
+    .summary p {
+      font-size: 0.93rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    /* Relevant Skills */
+    .skills-grid-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .skill-row {
+      font-size: 0.92rem;
+      line-height: 1.5;
+      color: var(--text-secondary);
+    }
+
+    .skill-row strong {
+      color: var(--text-main);
+      font-weight: 700;
+    }
+
+    /* Experience & Jobs */
+    .job {
+      margin-bottom: 18px;
+    }
+
+    .job:last-child {
+      margin-bottom: 0;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .job-title {
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: var(--text-main);
+    }
+
+    .job-company {
+      color: var(--secondary);
+      font-weight: 700;
+    }
+
+    .job-date {
+      font-size: 0.86rem;
+      color: var(--text-light);
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 4px;
+    }
+
+    li {
+      margin-bottom: 4px;
+      color: var(--text-secondary);
+      font-size: 0.91rem;
+      line-height: 1.5;
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Projects */
+    .project-item {
+      margin-bottom: 12px;
+    }
+
+    .project-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-item strong {
+      color: var(--text-main);
+      font-size: 0.93rem;
+    }
+
+    .project-item span {
+      color: var(--text-secondary);
+      font-size: 0.91rem;
+      line-height: 1.5;
+    }
+
+    /* Education & Certifications */
+    .edu-block {
+      margin-bottom: 6px;
+    }
+
+    .cert-list {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .cert-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.92rem;
+    }
+
+    .cert-list li img {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+
+    .cert-list li strong {
+      color: var(--text-main);
+    }
+
+    /* References */
+    .references-text {
+      font-size: 0.92rem;
+      color: var(--text-light);
+      font-style: italic;
+    }
+
+    /* Action Buttons */
+    .action-bar {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: flex;
+      gap: 12px;
+      z-index: 100;
+    }
+
+    .action-btn {
+      background: var(--secondary);
+      color: #ffffff;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(0, 56, 143, 0.3);
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .action-btn:hover {
+      background: #002766;
+      transform: translateY(-2px);
+    }
+
+    .action-btn.secondary-btn {
+      background: #ffffff;
+      color: var(--secondary);
+      border: 2px solid var(--secondary);
+    }
+
+    .action-btn.secondary-btn:hover {
+      background: var(--secondary-light);
+    }
+
+    /* Print Optimizations */
+    @media print {
+      .action-bar {
+        display: none;
       }
 
       body {
-        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        line-height: 1.55;
-        color: var(--text-main);
-        background: var(--bg-page);
-        padding: 35px 20px;
+        padding: 0;
+        background: #ffffff;
+        color: #000000;
+        font-size: 10pt;
       }
 
       .resume-container {
-        max-width: 900px;
-        margin: 0 auto;
-        background: #ffffff;
-        padding: 50px 55px;
-        box-shadow: 0 10px 30px rgba(0, 56, 143, 0.07);
-        border-radius: 12px;
-        border: 1px solid var(--border);
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        max-width: 100%;
       }
 
-      /* Header */
       header {
-        text-align: center;
-        border-bottom: 3px solid var(--secondary);
-        padding-bottom: 22px;
-        margin-bottom: 26px;
-        position: relative;
+        padding-bottom: 12px;
+        margin-bottom: 16px;
       }
 
-      header::after {
-        content: "";
-        position: absolute;
-        bottom: -3px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100px;
-        height: 3px;
-        background: var(--primary);
+      section {
+        margin-bottom: 16px;
+        page-break-inside: avoid;
       }
 
       h1 {
-        font-family: "Outfit", sans-serif;
-        font-size: 2.35rem;
-        font-weight: 800;
-        color: var(--secondary);
-        letter-spacing: -0.5px;
-        margin-bottom: 4px;
-        text-transform: uppercase;
+        font-size: 1.8rem;
       }
 
       .subtitle {
-        font-family: "Outfit", sans-serif;
-        font-size: 1.2rem;
-        color: var(--text-main);
-        font-weight: 700;
-        margin-bottom: 12px;
-        letter-spacing: 0.5px;
+        font-size: 1rem;
       }
 
       .contact-info {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 16px;
-        flex-wrap: wrap;
-        font-size: 0.9rem;
-        color: var(--text-secondary);
-      }
-
-      .contact-info a {
-        color: var(--secondary);
-        text-decoration: none;
-        font-weight: 600;
-        transition: color 0.2s ease;
-      }
-
-      .contact-info a:hover {
-        color: #002255;
-        text-decoration: underline;
-      }
-
-      .contact-info span {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-      }
-
-      .contact-info span i {
-        color: var(--secondary);
-      }
-
-      .divider-dot {
-        color: var(--border);
-        font-weight: bold;
-      }
-
-      /* Sections */
-      section {
-        margin-bottom: 24px;
+        font-size: 8.5pt;
       }
 
       h2 {
-        font-family: "Outfit", sans-serif;
-        font-size: 1.05rem;
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        border-bottom: 1.5px solid var(--border);
-        padding-bottom: 6px;
-        margin-bottom: 14px;
-        color: var(--secondary);
-        display: flex;
-        align-items: center;
-        gap: 8px;
+        font-size: 9.5pt;
+        margin-bottom: 8px;
+        padding-bottom: 4px;
       }
 
-      h2 i {
-        font-size: 0.95rem;
-        color: var(--secondary);
+      li,
+      p,
+      .skill-row,
+      .project-item span {
+        font-size: 8.8pt;
+        line-height: 1.4;
       }
+    }
 
-      /* Profile Summary */
-      .summary p {
-        font-size: 0.93rem;
-        color: var(--text-secondary);
-        line-height: 1.6;
-        text-align: justify;
-      }
-
-      /* Relevant Skills */
-      .skills-grid-list {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-      }
-
-      .skill-row {
-        font-size: 0.92rem;
-        line-height: 1.5;
-        color: var(--text-secondary);
-      }
-
-      .skill-row strong {
-        color: var(--text-main);
-        font-weight: 700;
-      }
-
-      /* Experience & Jobs */
-      .job {
-        margin-bottom: 18px;
-      }
-
-      .job:last-child {
-        margin-bottom: 0;
+    @media (max-width: 650px) {
+      .resume-container {
+        padding: 30px 20px;
       }
 
       .job-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        margin-bottom: 4px;
-        flex-wrap: wrap;
-        gap: 4px;
-      }
-
-      .job-title {
-        font-weight: 700;
-        font-size: 0.98rem;
-        color: var(--text-main);
-      }
-
-      .job-company {
-        color: var(--secondary);
-        font-weight: 700;
-      }
-
-      .job-date {
-        font-size: 0.86rem;
-        color: var(--text-light);
-        font-style: italic;
-        font-weight: 500;
-      }
-
-      ul {
-        padding-left: 20px;
-        margin-top: 4px;
-      }
-
-      li {
-        margin-bottom: 4px;
-        color: var(--text-secondary);
-        font-size: 0.91rem;
-        line-height: 1.5;
-      }
-
-      li:last-child {
-        margin-bottom: 0;
-      }
-
-      /* Projects */
-      .project-item {
-        margin-bottom: 12px;
-      }
-
-      .project-item:last-child {
-        margin-bottom: 0;
-      }
-
-      .project-item strong {
-        color: var(--text-main);
-        font-size: 0.93rem;
-      }
-
-      .project-item span {
-        color: var(--text-secondary);
-        font-size: 0.91rem;
-        line-height: 1.5;
-      }
-
-      /* Education & Certifications */
-      .edu-block {
-        margin-bottom: 6px;
-      }
-
-      .cert-list {
-        list-style: none;
-        padding-left: 0;
-        display: flex;
         flex-direction: column;
-        gap: 8px;
       }
 
-      .cert-list li {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 0.92rem;
+      .contact-info {
+        flex-direction: column;
+        gap: 6px;
       }
 
-      .cert-list li img {
-        width: 22px;
-        height: 22px;
-        object-fit: contain;
-        border-radius: 4px;
+      .divider-dot {
+        display: none;
       }
+    }
+  </style>
+</head>
 
-      .cert-list li strong {
-        color: var(--text-main);
-      }
+<body>
+  <div class="resume-container">
+    <!-- Header -->
+    <header>
+      <h1>MUNUFIE COLLINS ANANE</h1>
+      <div class="subtitle">DevOps Engineer.</div>
+      <div class="contact-info">
+        <span><i class="fas fa-phone"></i> +233 55 968 9849</span>
+        <span class="divider-dot">•</span>
+        <span><i class="fas fa-envelope"></i> <a
+            href="mailto:collinsmunufie2018@gmail.com">collinsmunufie2018@gmail.com</a></span>
+        <span class="divider-dot">•</span>
+        <span><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/collins-munufie/"
+            target="_blank">LinkedIn</a></span>
+        <span class="divider-dot">•</span>
+        <span><i class="fab fa-github"></i> <a href="https://github.com/Collins-Munufie"
+            target="_blank">GitHub</a></span>
+        <span class="divider-dot">•</span>
+        <span><i class="fas fa-globe"></i> <a href="https://collinsmunufie.netlify.app/"
+            target="_blank">Portfolio</a></span>
+      </div>
+    </header>
 
-      /* References */
-      .references-text {
-        font-size: 0.92rem;
-        color: var(--text-light);
-        font-style: italic;
-      }
+    <!-- Profile Summary -->
+    <section class="summary">
+      <h2><i class="fas fa-user-circle"></i> PROFILE SUMMARY</h2>
+      <p>
+        Final-year Information Technology student at the University of Energy and Natural Resources (UENR), with
+        hands-on professional experience in DevOps engineering, cloud infrastructure, software quality assurance, and
+        frontend development. Proven track record deploying and managing cloud environments on AWS using Docker,
+        Kubernetes, Terraform, and CI/CD pipelines through Jenkins and GitLab CI. Official uTest-certified tester with
+        experience across functional, performance, visual, and content testing on production-grade software. Adept at
+        process documentation, automation, and cross-functional collaboration across remote and institutional
+        environments. Detail-oriented and results-driven, with a strong foundation in building reliable, scalable, and
+        well-monitored software systems.
+      </p>
+    </section>
 
-      /* Action Buttons */
-      .action-bar {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        display: flex;
-        gap: 12px;
-        z-index: 100;
-      }
-
-      .action-btn {
-        background: var(--secondary);
-        color: #ffffff;
-        border: none;
-        padding: 12px 22px;
-        border-radius: 50px;
-        cursor: pointer;
-        box-shadow: 0 6px 20px rgba(0, 56, 143, 0.3);
-        font-weight: 700;
-        font-size: 0.9rem;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        text-decoration: none;
-        transition: transform 0.2s ease, background 0.2s ease;
-      }
-
-      .action-btn:hover {
-        background: #002766;
-        transform: translateY(-2px);
-      }
-
-      .action-btn.secondary-btn {
-        background: #ffffff;
-        color: var(--secondary);
-        border: 2px solid var(--secondary);
-      }
-
-      .action-btn.secondary-btn:hover {
-        background: var(--secondary-light);
-      }
-
-      /* Print Optimizations */
-      @media print {
-        .action-bar {
-          display: none;
-        }
-
-        body {
-          padding: 0;
-          background: #ffffff;
-          color: #000000;
-          font-size: 10pt;
-        }
-
-        .resume-container {
-          box-shadow: none;
-          border: none;
-          padding: 0;
-          max-width: 100%;
-        }
-
-        header {
-          padding-bottom: 12px;
-          margin-bottom: 16px;
-        }
-
-        section {
-          margin-bottom: 16px;
-          page-break-inside: avoid;
-        }
-
-        h1 {
-          font-size: 1.8rem;
-        }
-
-        .subtitle {
-          font-size: 1rem;
-        }
-
-        .contact-info {
-          font-size: 8.5pt;
-        }
-
-        h2 {
-          font-size: 9.5pt;
-          margin-bottom: 8px;
-          padding-bottom: 4px;
-        }
-
-        li, p, .skill-row, .project-item span {
-          font-size: 8.8pt;
-          line-height: 1.4;
-        }
-      }
-
-      @media (max-width: 650px) {
-        .resume-container {
-          padding: 30px 20px;
-        }
-
-        .job-header {
-          flex-direction: column;
-        }
-
-        .contact-info {
-          flex-direction: column;
-          gap: 6px;
-        }
-
-        .divider-dot {
-          display: none;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="resume-container">
-      <!-- Header -->
-      <header>
-        <h1>MUNUFIE COLLINS ANANE</h1>
-        <div class="subtitle">DevOps Engineer.</div>
-        <div class="contact-info">
-          <span><i class="fas fa-phone"></i> +233 55 968 9849</span>
-          <span class="divider-dot">•</span>
-          <span><i class="fas fa-envelope"></i> <a href="mailto:collinsmunufie2018@gmail.com">collinsmunufie2018@gmail.com</a></span>
-          <span class="divider-dot">•</span>
-          <span><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/collins-munufie/" target="_blank">LinkedIn</a></span>
-          <span class="divider-dot">•</span>
-          <span><i class="fab fa-github"></i> <a href="https://github.com/Collins-Munufie" target="_blank">GitHub</a></span>
-          <span class="divider-dot">•</span>
-          <span><i class="fas fa-globe"></i> <a href="https://collinsmunufie.netlify.app/" target="_blank">Portfolio</a></span>
+    <!-- Relevant Skills -->
+    <section class="skills">
+      <h2><i class="fas fa-tools"></i> RELEVANT SKILLS</h2>
+      <div class="skills-grid-list">
+        <div class="skill-row">
+          • <strong>Software & Web Development:</strong> HTML, CSS, JavaScript, TypeScript,Next.js, React, REST APIs,
+          application deployment
         </div>
-      </header>
+        <div class="skill-row">
+          • <strong>Quality Assurance:</strong> Functional Testing, Performance Testing, Visual Testing, Content
+          Testing, defect reporting, test cycle management
+        </div>
+        <div class="skill-row">
+          • <strong>Cloud Platforms:</strong> AWS (EC2, S3, Lambda, API Gateway, RDS, DynamoDB, CloudFront, Route 53)
+        </div>
+        <div class="skill-row">
+          • <strong>DevOps & Automation:</strong> Docker, Kubernetes, Jenkins, GitHub Actions, GitLab CI/CD, Terraform,
+          Shell Scripting, AWS CloudFormation
+        </div>
+        <div class="skill-row">
+          • <strong>Monitoring & Reporting:</strong> Prometheus, Grafana, system performance tracking
+        </div>
+        <div class="skill-row">
+          • <strong>Process & Documentation:</strong> technical documentation, workflow improvement, Linux & Windows
+          environments, networking fundamentals.
+        </div>
+      </div>
+    </section>
 
-      <!-- Profile Summary -->
-      <section class="summary">
-        <h2><i class="fas fa-user-circle"></i> PROFILE SUMMARY</h2>
-        <p>
-          Final-year Information Technology student at the University of Energy and Natural Resources (UENR), with hands-on professional experience in DevOps engineering, cloud infrastructure, software quality assurance, and frontend development. Proven track record deploying and managing cloud environments on AWS using Docker, Kubernetes, Terraform, and CI/CD pipelines through Jenkins and GitLab CI. Official uTest-certified tester with experience across functional, performance, visual, and content testing on production-grade software. Adept at process documentation, automation, and cross-functional collaboration across remote and institutional environments. Detail-oriented and results-driven, with a strong foundation in building reliable, scalable, and well-monitored software systems.
-        </p>
-      </section>
+    <!-- Professional Experience -->
+    <section class="experience">
+      <h2><i class="fas fa-briefcase"></i> PROFESSIONAL EXPERIENCE</h2>
 
-      <!-- Relevant Skills -->
-      <section class="skills">
-        <h2><i class="fas fa-tools"></i> RELEVANT SKILLS</h2>
-        <div class="skills-grid-list">
-          <div class="skill-row">
-            • <strong>Software & Web Development:</strong> HTML, CSS, JavaScript, TypeScript, React, REST APIs, application deployment
-          </div>
-          <div class="skill-row">
-            • <strong>Quality Assurance:</strong> Functional Testing, Performance Testing, Visual Testing, Content Testing, defect reporting, test cycle management
-          </div>
-          <div class="skill-row">
-            • <strong>Cloud Platforms:</strong> AWS (EC2, S3, Lambda, API Gateway, RDS, DynamoDB, CloudFront, Route 53)
-          </div>
-          <div class="skill-row">
-            • <strong>DevOps & Automation:</strong> Docker, Kubernetes, Jenkins, GitHub Actions, GitLab CI/CD, Terraform, Shell Scripting, AWS CloudFormation
-          </div>
-          <div class="skill-row">
-            • <strong>Monitoring & Reporting:</strong> Prometheus, Grafana, system performance tracking
-          </div>
-          <div class="skill-row">
-            • <strong>Process & Documentation:</strong> technical documentation, workflow improvement, Linux & Windows environments, networking fundamentals.
-          </div>
+      <!-- Role 1: 404 Paradox Labs -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Frontend Developer | <span class="job-company">404 Paradox Labs</span></span>
+          <span class="job-date">Jun 2026 – Present</span>
         </div>
-      </section>
-
-      <!-- Professional Experience -->
-      <section class="experience">
-        <h2><i class="fas fa-briefcase"></i> PROFESSIONAL EXPERIENCE</h2>
-
-        <!-- Role 1: 404 Paradox Labs -->
-        <div class="job">
-          <div class="job-header">
-            <span class="job-title">Frontend Developer | <span class="job-company">404 Paradox Labs</span></span>
-            <span class="job-date">Jun 2026 – Present</span>
-          </div>
-          <ul>
-            <li>Developing user-facing features for a telemedicine platform serving patient-facing workflows including appointment booking, using React, JavaScript, HTML, and CSS.</li>
-            <li>Built and delivered responsive, accessible UI components that reduced cross-device rendering inconsistencies across 3+ screen breakpoints.</li>
-            <li>Translated product and design requirements into functional React components, collaborating within a team of 4 developers on an agile delivery cycle.</li>
-            <li>Debugged and resolved UI behaviour issues across mobile and desktop environments, improving interface consistency and reducing reported frontend bugs.</li>
-          </ul>
-        </div>
-
-        <!-- Role 2: uTest -->
-        <div class="job">
-          <div class="job-header">
-            <span class="job-title">Software Quality Assurance Tester | <span class="job-company">uTest (Applause) - Remote</span></span>
-            <span class="job-date">May 2026 – Present</span>
-          </div>
-          <ul>
-            <li>Conducted functional, performance, visual, and content testing on live software products for global technology clients across web and mobile platforms.</li>
-            <li>Identified, documented, and reported defects with clear reproduction steps, expected vs. actual behaviour, and severity ratings using uTest's test management platform.</li>
-            <li>Executed test cycles across multiple devices, browsers, and operating systems, successfully testing 22 production-grade software products to date.</li>
-            <li>Maintained active tester status on the uTest platform, contributing to crowd-sourced QA efforts that support software quality before public release.</li>
-          </ul>
-        </div>
-
-        <!-- Role 3: Thrive Africa -->
-        <div class="job">
-          <div class="job-header">
-            <span class="job-title">Cloud Computing Intern | <span class="job-company">Thrive Africa - Remote</span></span>
-            <span class="job-date">Feb 2026 – Mar 2026</span>
-          </div>
-          <ul>
-            <li>Supported implementation of DevOps practices including CI/CD pipeline setup, Infrastructure as Code, and deployment automation across cloud environments.</li>
-            <li>Provisioned and managed cloud infrastructure using Terraform, monitoring environments for performance, cost efficiency, and reliability across 2+ project workstreams.</li>
-            <li>Collaborated with a cross-functional Machine Learning team to design and document a scalable architecture on Google Cloud (Cloud Run, Cloud Storage, Cloud SQL) for ML experiment tracking.</li>
-            <li>Contributed to team documentation and workflow improvements, strengthening remote collaboration across a distributed team of engineers.</li>
-          </ul>
-        </div>
-
-        <!-- Role 4: Simplilearn -->
-        <div class="job">
-          <div class="job-header">
-            <span class="job-title">DevOps on AWS Trainee | <span class="job-company">Simplilearn – SkillUp</span></span>
-            <span class="job-date">Aug 2025 – Oct 2025</span>
-          </div>
-          <ul>
-            <li>Built foundational knowledge of DevOps principles, culture, and collaborative delivery practices applied to cloud-native AWS environments.</li>
-            <li>Implemented end-to-end CI/CD pipelines on AWS, reducing simulated release cycle time through automation using CodeCommit, CodeBuild, CodeDeploy, and CodePipeline.</li>
-            <li>Applied Infrastructure as Code (IaC) concepts using AWS CloudFormation and Terraform to provision reproducible, version-controlled cloud environments.</li>
-            <li>Completed structured training across 3 months, covering DevOps tooling, cloud automation, and deployment best practices on AWS.</li>
-          </ul>
-        </div>
-
-        <!-- Role 5: AmaliTech -->
-        <div class="job">
-          <div class="job-header">
-            <span class="job-title">Cloud & DevOps Trainee | <span class="job-company">AmaliTech — Remote</span></span>
-            <span class="job-date">Sep 2024 – Jan 2025</span>
-          </div>
-          <ul>
-            <li>Completed the intensive AWS re/Start program, gaining hands-on experience in cloud infrastructure, software delivery, and DevOps practices over 5 months.</li>
-            <li>Built serverless applications using AWS Lambda and API Gateway, reducing infrastructure overhead by eliminating server provisioning for event-driven workloads.</li>
-            <li>Improved deployment consistency and delivery speed by building automated CI/CD pipelines using Jenkins and Docker across multiple project environments.</li>
-            <li>Deployed and managed containerised applications on AWS, supporting reliable and scalable service delivery across development and staging environments.</li>
-            <li>Collaborated with peers on scalable architecture design and produced documentation of best practices adopted by the team.</li>
-          </ul>
-        </div>
-
-        <!-- Role 6: UENR IT Graphic Designer -->
-        <div class="job">
-          <div class="job-header">
-            <span class="job-title">IT Department - Graphic Designer | <span class="job-company">University of Energy and Natural Resources (UENR)</span></span>
-            <span class="job-date">2022 – Present</span>
-          </div>
-          <ul>
-            <li>Supported the university's Information Technology department in delivering digital communication materials and institutional graphics using Adobe Photoshop.</li>
-            <li>Designed promotional materials, event visuals, and digital assets aligned with the department's visual identity and communication standards.</li>
-            <li>Collaborated with IT staff on technology-facing design tasks, bridging technical requirements and visual output for institutional use.</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Projects -->
-      <section class="projects">
-        <h2><i class="fas fa-layer-group"></i> PROJECTS</h2>
-        <div class="project-item">
-          • <strong>Full-Stack Editorial & Publication Platform</strong> — <span>A full-stack editorial platform and publication system engineered to deliver essays, field reports, and technical insights from Accra, Ghana, featuring a clean reader experience, Creator Studio, and Administration Suite (Next.js, React, TypeScript, Tailwind CSS).</span>
-        </div>
-        <div class="project-item">
-          • <strong>KHOPHI Academy — School Web Platform</strong> — <span>A modern school web platform and campus management system built for an international day and boarding institution offering dual Cambridge International and National Standards curricula, featuring academic program showcases, admissions workflows, and responsive multi-device interfaces (React, TypeScript, Vite, Tailwind CSS).</span>
-        </div>
-        <div class="project-item">
-          • <strong>School Management System (SMS)</strong> — <span>A production-grade, full-stack School Management System tailored for the Ghanaian basic education system (Kindergarten, Primary, and Junior High School / JHS). The system digitizes student records, 3-term academic setup, attendance registers, WAEC basic grading, branded PDF report card generation, fee invoicing in GHS (₵), Mobile Money payment tracking, timetable scheduling, announcements, and multi-role dashboards.</span>
-        </div>
-        <div class="project-item">
-          • <strong>Kubernetes-Based Microservices Deployment</strong> — <span>Deployed a full-scale microservice application on Kubernetes, implementing real-time observability using Prometheus and Grafana dashboards that monitor system performance across all running pods and services.</span>
-        </div>
-        <div class="project-item">
-          • <strong>React App Deployment on AWS EC2</strong> — <span>Deployed and managed a production-ready React web application on AWS EC2, configuring security groups, IAM roles, and instance lifecycle management for a reliable hosting environment.</span>
-        </div>
-        <div class="project-item">
-          • <strong>Automated Infrastructure Provisioning with Terraform</strong> — <span>Built a fully automated IaC solution using Terraform to provision AWS resources consistently across environments, eliminating manual setup and enabling reproducible deployments in under 10 minutes.</span>
-        </div>
-        <div class="project-item">
-          • <strong>Cognify - AI-Powered Study Platform</strong> — <span>Developed an AI-powered study tool using React, JavaScript, and Python that transforms PDFs, Word documents, PowerPoint files, websites, and YouTube links into interactive study materials, supporting multiple input formats for diverse learning needs.</span>
-        </div>
-        <div class="project-item">
-          • <strong>Dockerized Three-Tier Web Application</strong> — <span>Developed and containerized a three-tier web application using Docker and Docker Compose, separating the frontend, backend, and database into independent services.</span>
-        </div>
-      </section>
-
-      <!-- Education -->
-      <section class="education">
-        <h2><i class="fas fa-graduation-cap"></i> EDUCATION</h2>
-        <div class="job-header edu-block">
-          <span class="job-title">University of Energy and Natural Resources (UENR)</span>
-          <span class="job-date">Jan 2022 – Expected Sep 2026</span>
-        </div>
-        <p style="font-size: 0.92rem; color: var(--text-secondary);">Bachelor of Science in Information Technology</p>
-      </section>
-
-      <!-- Certifications -->
-      <section class="certifications">
-        <h2><i class="fas fa-certificate"></i> CERTIFICATIONS</h2>
-        <ul class="cert-list">
-          <li>
-            <img src="Linux-foundation.png" alt="Linux Foundation" />
-            <span>• <strong>Kubernetes and Cloud Native Essentials (LFS250)</strong> - The Linux Foundation</span>
-          </li>
-          <li>
-            <img src="aws-certified-cloud-practitioner.png" alt="AWS" />
-            <span>• <strong>AWS Certified Cloud Practitioner</strong></span>
-          </li>
-          <li>
-            <img src="Simplilearn.png" alt="Simplilearn" />
-            <span>• <strong>DevOps on AWS</strong> - Simplilearn</span>
-          </li>
+        <ul>
+          <li>Developing user-facing features for a telemedicine platform serving patient-facing workflows including
+            appointment booking, using React, JavaScript, HTML, and CSS.</li>
+          <li>Built and delivered responsive, accessible UI components that reduced cross-device rendering
+            inconsistencies across 3+ screen breakpoints.</li>
+          <li>Translated product and design requirements into functional React components, collaborating within a team
+            of 4 developers on an agile delivery cycle.</li>
+          <li>Debugged and resolved UI behaviour issues across mobile and desktop environments, improving interface
+            consistency and reducing reported frontend bugs.</li>
         </ul>
-      </section>
+      </div>
 
-      <!-- References -->
-      <section class="references">
-        <p class="references-text">References available upon request.</p>
-      </section>
-    </div>
+      <!-- Role 2: uTest -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Software Quality Assurance Tester | <span class="job-company">uTest (Applause) -
+              Remote</span></span>
+          <span class="job-date">May 2026 – Present</span>
+        </div>
+        <ul>
+          <li>Conducted functional, performance, visual, and content testing on live software products for global
+            technology clients across web and mobile platforms.</li>
+          <li>Identified, documented, and reported defects with clear reproduction steps, expected vs. actual behaviour,
+            and severity ratings using uTest's test management platform.</li>
+          <li>Executed test cycles across multiple devices, browsers, and operating systems, successfully testing 22
+            production-grade software products to date.</li>
+          <li>Maintained active tester status on the uTest platform, contributing to crowd-sourced QA efforts that
+            support software quality before public release.</li>
+        </ul>
+      </div>
 
-    <!-- Action Bar -->
-    <div class="action-bar">
-      <a href="index.html" class="action-btn secondary-btn">
-        <i class="fas fa-arrow-left"></i> Back to Portfolio
-      </a>
-      <button class="action-btn" onclick="window.print()">
-        <i class="fas fa-print"></i> Print / Save PDF
-      </button>
-    </div>
-  </body>
+      <!-- Role 3: Thrive Africa -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Cloud Computing Intern | <span class="job-company">Thrive Africa -
+              Remote</span></span>
+          <span class="job-date">Feb 2026 – Mar 2026</span>
+        </div>
+        <ul>
+          <li>Supported implementation of DevOps practices including CI/CD pipeline setup, Infrastructure as Code, and
+            deployment automation across cloud environments.</li>
+          <li>Provisioned and managed cloud infrastructure using Terraform, monitoring environments for performance,
+            cost efficiency, and reliability across 2+ project workstreams.</li>
+          <li>Collaborated with a cross-functional Machine Learning team to design and document a scalable architecture
+            on Google Cloud (Cloud Run, Cloud Storage, Cloud SQL) for ML experiment tracking.</li>
+          <li>Contributed to team documentation and workflow improvements, strengthening remote collaboration across a
+            distributed team of engineers.</li>
+        </ul>
+      </div>
+
+      <!-- Role 4: Simplilearn -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">DevOps on AWS Trainee | <span class="job-company">Simplilearn – SkillUp</span></span>
+          <span class="job-date">Aug 2025 – Oct 2025</span>
+        </div>
+        <ul>
+          <li>Built foundational knowledge of DevOps principles, culture, and collaborative delivery practices applied
+            to cloud-native AWS environments.</li>
+          <li>Implemented end-to-end CI/CD pipelines on AWS, reducing simulated release cycle time through automation
+            using CodeCommit, CodeBuild, CodeDeploy, and CodePipeline.</li>
+          <li>Applied Infrastructure as Code (IaC) concepts using AWS CloudFormation and Terraform to provision
+            reproducible, version-controlled cloud environments.</li>
+          <li>Completed structured training across 3 months, covering DevOps tooling, cloud automation, and deployment
+            best practices on AWS.</li>
+        </ul>
+      </div>
+
+      <!-- Role 5: AmaliTech -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Cloud & DevOps Trainee | <span class="job-company">AmaliTech — Remote</span></span>
+          <span class="job-date">Sep 2024 – Jan 2025</span>
+        </div>
+        <ul>
+          <li>Completed the intensive AWS re/Start program, gaining hands-on experience in cloud infrastructure,
+            software delivery, and DevOps practices over 5 months.</li>
+          <li>Built serverless applications using AWS Lambda and API Gateway, reducing infrastructure overhead by
+            eliminating server provisioning for event-driven workloads.</li>
+          <li>Improved deployment consistency and delivery speed by building automated CI/CD pipelines using Jenkins and
+            Docker across multiple project environments.</li>
+          <li>Deployed and managed containerised applications on AWS, supporting reliable and scalable service delivery
+            across development and staging environments.</li>
+          <li>Collaborated with peers on scalable architecture design and produced documentation of best practices
+            adopted by the team.</li>
+        </ul>
+      </div>
+
+      <!-- Role 6: UENR IT Graphic Designer -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">IT Department - Graphic Designer | <span class="job-company">University of Energy and
+              Natural Resources (UENR)</span></span>
+          <span class="job-date">2022 – Present</span>
+        </div>
+        <ul>
+          <li>Supported the university's Information Technology department in delivering digital communication materials
+            and institutional graphics using Adobe Photoshop.</li>
+          <li>Designed promotional materials, event visuals, and digital assets aligned with the department's visual
+            identity and communication standards.</li>
+          <li>Collaborated with IT staff on technology-facing design tasks, bridging technical requirements and visual
+            output for institutional use.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects">
+      <h2><i class="fas fa-layer-group"></i> PROJECTS</h2>
+      <div class="project-item">
+        • <strong>Full-Stack Editorial & Publication Platform</strong> — <span>A full-stack editorial platform and
+          publication system engineered to deliver essays, field reports, and technical insights from Accra, Ghana,
+          featuring a clean reader experience, Creator Studio, and Administration Suite (Next.js, React, TypeScript,
+          Tailwind CSS).</span>
+      </div>
+      <div class="project-item">
+        • <strong>KHOPHI Academy — School Web Platform</strong> — <span>A modern school web platform and campus
+          management system built for an international day and boarding institution offering dual Cambridge
+          International and National Standards curricula, featuring academic program showcases, admissions workflows,
+          and responsive multi-device interfaces (React, TypeScript, Vite, Tailwind CSS).</span>
+      </div>
+      <div class="project-item">
+        • <strong>School Management System (SMS)</strong> — <span>A production-grade, full-stack School Management
+          System tailored for the Ghanaian basic education system (Kindergarten, Primary, and Junior High School / JHS).
+          The system digitizes student records, 3-term academic setup, attendance registers, WAEC basic grading, branded
+          PDF report card generation, fee invoicing in GHS (₵), Mobile Money payment tracking, timetable scheduling,
+          announcements, and multi-role dashboards.</span>
+      </div>
+      <div class="project-item">
+        • <strong>Kubernetes-Based Microservices Deployment</strong> — <span>Deployed a full-scale microservice
+          application on Kubernetes, implementing real-time observability using Prometheus and Grafana dashboards that
+          monitor system performance across all running pods and services.</span>
+      </div>
+      <div class="project-item">
+        • <strong>React App Deployment on AWS EC2</strong> — <span>Deployed and managed a production-ready React web
+          application on AWS EC2, configuring security groups, IAM roles, and instance lifecycle management for a
+          reliable hosting environment.</span>
+      </div>
+      <div class="project-item">
+        • <strong>Automated Infrastructure Provisioning with Terraform</strong> — <span>Built a fully automated IaC
+          solution using Terraform to provision AWS resources consistently across environments, eliminating manual setup
+          and enabling reproducible deployments in under 10 minutes.</span>
+      </div>
+      <div class="project-item">
+        • <strong>Cognify - AI-Powered Study Platform</strong> — <span>Developed an AI-powered study tool using React,
+          JavaScript, and Python that transforms PDFs, Word documents, PowerPoint files, websites, and YouTube links
+          into interactive study materials, supporting multiple input formats for diverse learning needs.</span>
+      </div>
+      <div class="project-item">
+        • <strong>Dockerized Three-Tier Web Application</strong> — <span>Developed and containerized a three-tier web
+          application using Docker and Docker Compose, separating the frontend, backend, and database into independent
+          services.</span>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="education">
+      <h2><i class="fas fa-graduation-cap"></i> EDUCATION</h2>
+      <div class="job-header edu-block">
+        <span class="job-title">University of Energy and Natural Resources (UENR)</span>
+        <span class="job-date">Jan 2022 – Expected Sep 2026</span>
+      </div>
+      <p style="font-size: 0.92rem; color: var(--text-secondary);">Bachelor of Science in Information Technology</p>
+    </section>
+
+    <!-- Certifications -->
+    <section class="certifications">
+      <h2><i class="fas fa-certificate"></i> CERTIFICATIONS</h2>
+      <ul class="cert-list">
+        <li>
+          <img src="Linux-foundation.png" alt="Linux Foundation" />
+          <span>• <strong>Kubernetes and Cloud Native Essentials (LFS250)</strong> - The Linux Foundation</span>
+        </li>
+        <li>
+          <img src="aws-certified-cloud-practitioner.png" alt="AWS" />
+          <span>• <strong>AWS Certified Cloud Practitioner</strong></span>
+        </li>
+        <li>
+          <img src="Simplilearn.png" alt="Simplilearn" />
+          <span>• <strong>DevOps on AWS</strong> - Simplilearn</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- References -->
+    <section class="references">
+      <p class="references-text">References available upon request.</p>
+    </section>
+  </div>
+
+  <!-- Action Bar -->
+  <div class="action-bar">
+    <a href="index.html" class="action-btn secondary-btn">
+      <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
+    <button class="action-btn" onclick="window.print()">
+      <i class="fas fa-print"></i> Print / Save PDF
+    </button>
+  </div>
+</body>
+
 </html>
